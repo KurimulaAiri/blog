@@ -13,9 +13,11 @@ export default hopeTheme({
 
   logo: "https://theme-hope-assets.vuejs.press/logo.svg",
 
-  repo: "vuepress-theme-hope/vuepress-theme-hope",
+  repo: "KurimulaAiri/blog",
 
   docsDir: "src",
+
+  docsBranch: "master",
 
   blog: {
     medias: {
