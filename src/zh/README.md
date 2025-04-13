@@ -7,6 +7,9 @@ title: KurimulaAiri的小窝
 heroImage: /assets/images/image.png
 heroText: KurimulaAiri的小窝
 heroFullScreen: true
+
+bgImage: /assets/images/bg1.png
+
 tagline: 一条咸鱼
 projects:
   #- icon: folder-open
