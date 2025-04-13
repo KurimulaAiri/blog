@@ -5,9 +5,27 @@ icon: house
 title: KurimulaAiri的小窝
 # heroImage: https://theme-hope-assets.vuejs.press/logo.svg
 heroImage: /assets/images/image.png
+heroImageStyle:
+  - border-radius: 50%
+  - box-shadow: '0 0 10px'
+  - background-color: 'rgba(255, 255, 255, 0.5'
+
+
 heroText: KurimulaAiri的小窝
 heroFullScreen: true
-tagline: 一条咸鱼
+
+bgImage: /assets/images/bg1.png
+bgImageStyle: 
+  - filter: blur(5px) 
+  - webkit-filter: blur(5px) 
+
+bgImageDark: /assets/images/bg2.png
+bgImageDarkStyle:
+  - filter: blur(5px)
+  - webkit-filter: blur(5px)
+  - opacity: '0.7'
+
+tagline: '<p style="color: #000; -webkit-text-stroke: 1px solid #888; bold: true">一条咸鱼</p>'
 projects:
   #- icon: folder-open
   #  name: 项目名称

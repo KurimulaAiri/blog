@@ -13,6 +13,8 @@ export default hopeTheme({
 
   logo: "/assets/images/image.png",
 
+  favicon: "favicon.ico",
+
   repo: "KurimulaAiri/blog",
 
   docsDir: "src",
