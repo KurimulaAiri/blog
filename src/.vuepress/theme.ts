@@ -96,7 +96,7 @@ export default hopeTheme({
       displayFooter: true,
 
       blog: {
-        description: "一个前端开发者",
+        description: "一个正在学习的本科学生",
         intro: "/zh/intro.html",
       },
 
