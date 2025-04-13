@@ -8,10 +8,10 @@ export default hopeTheme({
 
   author: {
     name: "KurimulaAiri",
-    url: "https://mister-hope.com",
+    url: "https://github.com/KurimulaAiri",
   },
 
-  logo: "https://theme-hope-assets.vuejs.press/logo.svg",
+  logo: "/assets/images/image.png",
 
   repo: "KurimulaAiri/blog",
 
