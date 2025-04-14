@@ -10,15 +10,10 @@ export default hopeTheme({
     name: "KurimulaAiri",
     url: "https://github.com/KurimulaAiri",
   },
-
   logo: "/assets/images/image.png",
-
   favicon: "favicon.ico",
-
   repo: "KurimulaAiri/blog",
-
   docsDir: "src",
-
   docsBranch: "master",
 
   blog: {
@@ -62,7 +57,7 @@ export default hopeTheme({
   },
 
   locales: {
-    "/": {
+    "/en/": {
       // navbar
       navbar: enNavbar,
 
@@ -75,7 +70,7 @@ export default hopeTheme({
 
       blog: {
         description: "A FrontEnd programmer",
-        intro: "/intro.html",
+        intro: "/en/intro.html",
       },
 
       metaLocales: {
@@ -86,7 +81,7 @@ export default hopeTheme({
     /**
      * Chinese locale config
      */
-    "/zh/": {
+    "/": {
       // navbar
       navbar: zhNavbar,
 
@@ -98,8 +93,8 @@ export default hopeTheme({
       displayFooter: true,
 
       blog: {
-        description: "一个正在学习的本科学生",
-        intro: "/zh/intro.html",
+        description: "一个正在学习的学生",
+        intro: "/intro.html",
       },
 
       // page meta
@@ -111,11 +106,11 @@ export default hopeTheme({
 
   encrypt: {
     config: {
-      "/demo/encrypt.html": {
+      "/en/demo/encrypt.html": {
         hint: "Password: 1234",
         password: "1234",
       },
-      "/zh/demo/encrypt.html": {
+      "/demo/encrypt.html": {
         hint: "Password: 1234",
         password: "1234",
       },

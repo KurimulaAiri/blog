@@ -3,13 +3,13 @@ import { navbar } from "vuepress-theme-hope";
 
 // 这里是导航栏
 export const zhNavbar = navbar([
-  "/zh/",
+  "/",
   // "/zh/demo/",
   {
     text: "文章",
     icon: "pen-to-square",
     // prefix: "/zh/posts/",
-    prefix: "/zh/art/",
+    prefix: "/art/",
     children: [
       {
         text: "代码学习",
@@ -30,6 +30,21 @@ export const zhNavbar = navbar([
             icon: "pen-to-square",
             link: "math/",
           },
+          {
+            text: "英语",
+            icon: "pen-to-square",
+            link: "english/",
+          },
+          {
+            text: "政治",
+            icon: "pen-to-square",
+            link: "politics/",
+          },
+          {
+            text: "专业课",
+            icon: "pen-to-square",
+            link: "major/",
+          }
           // {
           //   text: "香蕉 1",
           //   icon: "pen-to-square",
