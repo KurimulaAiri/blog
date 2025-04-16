@@ -1,6 +1,6 @@
 ---
 title: 数据结构
-catalog: 
+category: 
     - 408
     - 数据结构
 ---
