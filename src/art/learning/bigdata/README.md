@@ -1,5 +1,6 @@
 ---
 title: 大数据相关
+index: false
 category:
   - 大数据
 ---
