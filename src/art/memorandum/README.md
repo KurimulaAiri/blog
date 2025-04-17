@@ -1,5 +1,6 @@
 ---
 title: 备忘录
+index: false
 ---
 
 # VCS
