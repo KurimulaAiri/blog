@@ -1,6 +1,9 @@
 ---
 title: 备忘录
 index: false
+category: 
+    - 备忘录
+    - 其他
 ---
 
 # VCS
