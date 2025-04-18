@@ -1,7 +1,7 @@
 // place your custom styles here
 .vp-blog-hero-title {
     color: var(--vp-c-accent-hover);
-    -webkit-text-stroke: 1px #888;
+    -webkit-text-stroke: 1px var(--vp-c-accent-bg);
 }
 
 .vp-nav-logo {

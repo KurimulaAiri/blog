@@ -4,6 +4,7 @@ index: false
 icon: landmark
 category:
   - 政治
+  - 考研
 ---
 
 <Catalog />
