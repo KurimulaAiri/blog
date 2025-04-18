@@ -1,6 +1,5 @@
 ---
 title: 备忘录
-index: false
 icon: clipboard-check
 category: 
     - 备忘录
