@@ -59,13 +59,13 @@ export const zhNavbar = navbar([
           // "4",
         ],
       },
-      "/intro"
       // { text: "樱桃", icon: "pen-to-square", link: "cherry" },
       // { text: "火龙果", icon: "pen-to-square", link: "dragonfruit" },
       // "tomato",
       // "strawberry",
     ],
   },
+  "/intro",
   // {
   //   text: "V2 文档",
   //   icon: "book",
