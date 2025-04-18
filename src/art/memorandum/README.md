@@ -1,7 +1,7 @@
 ---
 title: 备忘录
 index: false
-icon: memo-pad
+icon: clipboard-check
 category: 
     - 备忘录
     - 其他
