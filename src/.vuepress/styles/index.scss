@@ -1,6 +1,6 @@
 // place your custom styles here
 .vp-blog-hero-title {
-    color: #000;
+    color: var(--theme-color);
     -webkit-text-stroke: 1px #888;
 }
 
@@ -25,5 +25,5 @@
 }
 
 .vds-slider-progress vds-slider-track {
-    
+
 }
