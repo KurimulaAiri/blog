@@ -1,6 +1,6 @@
 // place your custom styles here
 .vp-blog-hero-title {
-    color: #000;
+    color: var(--vp-c-accent-hover);
     -webkit-text-stroke: 1px #888;
 }
 
@@ -18,12 +18,4 @@
 
 .vds-title-text, .vds-time {
     color: var(--vds-font-color)
-}
-
-.vds-slider-track {
-    background-color: var(--vds-font-color);
-}
-
-.vds-slider-progress vds-slider-track {
-    
 }
