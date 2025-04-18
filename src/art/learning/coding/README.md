@@ -1,7 +1,8 @@
 ---
-title: 代码学习
+title: 编程相关
 index: false
 icon: code
 category:
-  - 代码学习
+  - 代码
+  - 学习
 ---

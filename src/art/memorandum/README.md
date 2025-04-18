@@ -4,7 +4,7 @@ index: false
 icon: clipboard-check
 category: 
     - 备忘录
-    - 其他
+    - 杂项
 ---
 
 # VCS
