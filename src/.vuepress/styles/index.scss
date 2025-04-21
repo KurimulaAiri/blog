@@ -1,7 +1,7 @@
 // place your custom styles here
 .vp-blog-hero-title {
-    color: #000;
-    -webkit-text-stroke: 1px #888;
+    color: var(--vp-c-accent-hover);
+    -webkit-text-stroke: 1px var(--vp-c-accent);
 }
 
 .vp-nav-logo {
@@ -14,4 +14,8 @@
     border-radius: 50%;
     box-shadow: 0 0 0 1px var(--logo-border-color);
     background-color: var(--logo-background-color);
+}
+
+.vds-title-text, .vds-time {
+    color: var(--vds-font-color)
 }

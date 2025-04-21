@@ -65,6 +65,7 @@ export const zhNavbar = navbar([
       // "strawberry",
     ],
   },
+  "/intro",
   // {
   //   text: "V2 文档",
   //   icon: "book",

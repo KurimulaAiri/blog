@@ -4,6 +4,7 @@ index: false
 icon: a
 category:
   - 英语
+  - 考研
 ---
 
 <Catalog/>
