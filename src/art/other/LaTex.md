@@ -32,4 +32,5 @@ tag:
 
 ## 参考
 
-[[【LaTeX应用】常用数学公式和符号 - 知乎](https://zhuanlan.zhihu.com/p/464237097)]
+[【LaTeX应用】常用数学公式和符号 - 知乎](https://zhuanlan.zhihu.com/p/464237097)
+[KaTex文档](https://katex.org/docs/support_table)
