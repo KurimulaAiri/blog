@@ -15,6 +15,7 @@ export default hopeTheme({
   repo: "KurimulaAiri/blog",
   docsDir: "src",
   docsBranch: "master",
+  editLink: false,
 
   blog: {
     medias: {
