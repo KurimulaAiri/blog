@@ -1,6 +1,6 @@
 ---
 title: LaTex常用公式标记
-icon: sigma
+icon: inbox
 category: 实用文档
 tag:
   - LaTex
