@@ -155,6 +155,10 @@ export default hopeTheme({
     tasklist: true,
     vPre: true,
 
+    highlighter: {
+      type: "shiki",
+    },
+
     // uncomment these if you need TeX support
     math: {
       // install katex before enabling it
