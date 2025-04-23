@@ -7,3 +7,4 @@ category:
 ---
 这里是所有文章的所在地
 测试
+<Catalog />

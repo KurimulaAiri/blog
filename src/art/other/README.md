@@ -5,3 +5,5 @@ icon: ellipsis
 category:
     - 杂项
 ---
+
+<Catalog />
