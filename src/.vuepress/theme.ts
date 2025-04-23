@@ -157,6 +157,7 @@ export default hopeTheme({
 
     highlighter: {
       type: "shiki",
+      notationDiff: true,
     },
 
     // uncomment these if you need TeX support
