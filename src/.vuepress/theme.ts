@@ -10,7 +10,7 @@ export default hopeTheme({
     name: "KurimulaAiri",
     url: "https://github.com/KurimulaAiri",
   },
-  logo: "/assets/images/image.png",
+  logo: "https://store.s1r0ko.top/images/logo.png",
   favicon: "favicon.ico",
   repo: "KurimulaAiri/blog",
   docsDir: "src",
