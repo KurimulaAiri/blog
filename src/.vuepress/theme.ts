@@ -159,6 +159,7 @@ export default hopeTheme({
       type: "shiki",
       notationDiff: true,
       collapsedLines: true,
+      notationErrorLevel: "true",
     },
 
     // uncomment these if you need TeX support

@@ -700,9 +700,9 @@ bool ListInsert(LinkList &L, int i, ElemType e) { // 在链表的第 i 个位置
 
 前插顾名思义是在指定位置的元素的前一位插入新的元素，这里给出两种方法
 
-​		第一种：`InsertPriorNode(LinkList L, LNode *p, ElemType e)` 这里通过传入头指针，然后对整个列表进行遍历，找到所需元素位置的前一位元素，然后进行后插操作，时间复杂度为 $O(n)$ 
+​		第一种：`InsertPriorNode(&L ,*p, e)` 这里通过传入头指针，然后对整个列表进行遍历，找到所需元素位置的前一位元素，然后进行后插操作，时间复杂度为 $O(n)$ 
 
-​		第二种：`InsertPriorNode(LNode *p, ElemType e)` 这里提供另一种思路，在传入节点后新建一个节点，将旧节点数据复制到新节点上，并将传入的数据存入旧节点，逻辑上实现了前插操作，时间复杂度为 $O(1)$
+​		第二种：`InsertPriorNode(*p, e)` 这里提供另一种思路，在传入节点后新建一个节点，将旧节点数据复制到新节点上，并将传入的数据存入旧节点，逻辑上实现了前插操作，时间复杂度为 $O(1)$
 
 :::tabs 
 
@@ -748,9 +748,9 @@ bool InsertPriorNode(LNode *p, LNode *s) { // 在指定节点 p 的前一位插�
 
 需要实现的功能：
 
-`ListDelete(&L, i, &e)`：删除操作。删除表 L 中第 i 个位置的元素，并返回删除元素的值
+`ListDelete(&L, i, &e)`：删除操作。删除表 L 中第 i 个位置的元素，并返回删除元素的值，时间复杂度为 $O(n)$
 
-`ListDelete(LNode *p)`：删除操作。删除指定节点 p 
+`ListDelete(*p)`：删除操作。删除指定节点 p ，时间复杂度为 $O(1)$
 
 :::tabs
 
@@ -791,3 +791,77 @@ bool ListDelete(LNode *p) { // 删除指定节点 p
 ```
 
 :::
+
+
+
+##### 单链表的查找
+
+对于查找我们需要实现两个功能：
+
+`GetElem(L, i)`：按位查找操作。获取表中第 i 个位置的元素的值
+
+`GetElem(L, e)`：按值查找操作。查找表中是否存在含有给定值 e 的元素，若存在则返回该元素的地址，若不存在则返回 NULL
+
+时间复杂度均为 $O(n)$
+
+下面两种情况都是默认带头节点的情况
+
+:::tabs
+
+@tab 按位查找（i）
+
+```c
+LNode * GetElem(LinkList L, int i) { // 按位查找操作。获取表中第 i 个位置的元素的值
+    if (i < 0) // 判断查找位置是否合法
+        return NULL; // 查找位置不合法，返回 ERROR
+    LNode *p = L; // p 指向头节点
+    int j = 0; // j 为计数器，记录当前扫描到的位置
+    while (p != NULL && j < i) { // 遍历链表，直到 p 指向第 i 个元素或者 p 为空
+        p = p->next; // p 指向下一个节点
+        j++; // 计数器 j 自增 1
+    }
+    return p; // 返回第 i 个元素
+}
+```
+
+@tab 按值查找（e）
+
+```c
+int GetElem(LinkList L, ElemType e) { // 按值查找操作。查找表中是否存在含有给定值 e 的元素
+    LNode *p = L->next; // p 指向头节点的下一个节点
+    int i = 1; // i 为计数器，记录当前扫描到的位置
+    while (p != NULL && p->data != e) { // 遍历链表，直到 p 指向含有给定值 e 的元素或者 p 为空，这里仍然会出现结构体比较的问题需要注意 [!code warning]
+        p = p->next; // p 指向下一个节点
+        i++; // 计数器 i 自增 1
+    }
+    return p; // 返回该元素
+}
+```
+
+:::
+
+有了对查找操作的封装，前面提到的插入和删除操作就可以直接调用查找操作，从而简化代码
+
+```c
+bool ListInsert(LinkList &L, int i, ElemType e) { // 在链表的第 i 个位置插入指定元素 e
+    if (i < 1) // 判断插入位置是否合法
+        return false; // 插入位置不合法，返回 false
+    LNode *p = L; // p 指向头节点 [!code --]
+    int j = 0; // j 为计数器，记录当前扫描到的位置 [!code --]
+    while (p != NULL && j < i - 1) { // 遍历链表，直到 p 指向第 i - 1 个元素或者 p 为空 [!code --]
+        p = p->next; // p 指向下一个节点 [!code --]
+        j++; // 计数器 j 自增 1 [!code --]
+    } // [!code --]
+    LNode *p = GetElem(L, i - 1); // 调用查找函数， p 指向第 i - 1 个节点 [!code ++]
+    return InsertNextNode(p, e); // 调用后插函数，将新节点插入到第 i - 1 个节点之后，返回插入成功与否 [!code ++]
+}
+```
+
+
+
+##### 单链表的建立
+
+这里仍然以带头节点的单链表为例
+
+需要实现的功能是
+
