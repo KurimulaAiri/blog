@@ -4,7 +4,7 @@ import { enNavbar, zhNavbar } from "./navbar/index.js";
 import { enSidebar, zhSidebar } from "./sidebar/index.js";
 
 export default hopeTheme({
-  hostname: "https://mister-hope.github.io",
+  hostname: "https://md.s1r0ko.top",
 
   author: {
     name: "KurimulaAiri",
@@ -158,6 +158,7 @@ export default hopeTheme({
     highlighter: {
       type: "shiki",
       notationDiff: true,
+      collapsedLines: true,
     },
 
     // uncomment these if you need TeX support

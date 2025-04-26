@@ -58,7 +58,7 @@ $a_1$ 称为**表头元素**， $a_n$ 称为**表尾元素**
 
 - 什么时候要传入引用“&”——对参数的修改结果需要“带回来”
 
-## 顺序表的存储结构（逻辑上和物理上）
+## 线性表的存储结构（逻辑上和物理上）
 
 ### 顺序表
 
@@ -698,4 +698,96 @@ bool ListInsert(LinkList &L, int i, ElemType e) { // 在链表的第 i 个位置
 
 - **前插**
 
+前插顾名思义是在指定位置的元素的前一位插入新的元素，这里给出两种方法
+
+​		第一种：`InsertPriorNode(LinkList L, LNode *p, ElemType e)` 这里通过传入头指针，然后对整个列表进行遍历，找到所需元素位置的前一位元素，然后进行后插操作，时间复杂度为 $O(n)$ 
+
+​		第二种：`InsertPriorNode(LNode *p, ElemType e)` 这里提供另一种思路，在传入节点后新建一个节点，将旧节点数据复制到新节点上，并将传入的数据存入旧节点，逻辑上实现了前插操作，时间复杂度为 $O(1)$
+
+:::tabs 
+
+@tab 当传入为数值时（ElemType）
+
+```c
+bool InsertPriorNode(LNode *p, ElemType e) { // 在指定节点 p 的前一位插入新节点，新节点的元素为 e
+    if (p == NULL) // 判断 p 是否为空
+        return false; // p 为空，返回 false
+    LNode *s = (LNode *)malloc(sizeof(LNode)); // 为插入的新节点分配内存空间
+    if (s == NULL) // 判断是否分配内存成功
+        return false; // 分配失败，返回 false
+    s->data = p->data; // 将新节点的数据域置为 p 的数据域
+    p->data = e; // 将 p 的数据域置为 e
+    s->next = p->next; // 将新节点的指针域指向 p 的下一个节点
+    p->next = s; // 将 p 的指针域指向新节点
+    return true; // 插入成功，返回 true
+}
+```
+
+@tab 当传入为节点时（Node）
+
+```c
+bool InsertPriorNode(LNode *p, LNode *s) { // 在指定节点 p 的前一位插入新节点，新节点为 s
+    if (p == NULL || s == NULL) // 判断 p 和 s 是否为空
+        return false; // p 或 s 为空，返回 false
+    s->next = p->next; // 将新节点的指针域指向 p 的下一个节点
+    p->next = s; // 将 p 的指针域指向新节点
+    ElemType tmp = p->data; // 将 p 的数据域暂存
+    p->data = s->data; // 将 p 的数据域置为 s 的数据域
+    s->data = tmp; // 将 s 的数据域置为 p 的数据域
+    return true; // 插入成功，返回 true
+}
+```
+
+:::
+
+
+
 ##### 单链表的删除
+
+对于删除，只讨论带头节点的情况
+
+需要实现的功能：
+
+`ListDelete(&L, i, &e)`：删除操作。删除表 L 中第 i 个位置的元素，并返回删除元素的值
+
+`ListDelete(LNode *p)`：删除操作。删除指定节点 p 
+
+:::tabs
+
+@tab 删除指定位置元素（i）
+
+```c
+bool ListDelete(LinkList &L, int i, ElemType &e) { // 删除链表 L 中第 i 个位置的元素，并返回删除元素的值
+    if (i < 1) // 判断删除位置是否合法
+        return false; // 删除位置不合法，返回 false
+    LNode *p = L; // p 指向头节点
+    int j = 0; // j 为计数器，记录当前扫描到的位置
+    while (p != NULL && j < i - 1) { // 遍历链表，直到 p 指向第 i - 1 个元素或者 p 为空
+        p = p->next; // p 指向下一个节点
+        j++; // 计数器 j 自增 1
+    }
+    if (p == NULL) // i 值不合法，链表中不存在第 i 个元素
+        return false; // 返回 false
+    LNode *q = p->next; // q 指向第 i 个节点
+    p->next = q->next; // 将第 i - 1 个节点的指针域指向第 i + 1 个节点
+    e = q->data; // 将删除的元素赋值给 e
+    free(q); // 释放第 i 个节点
+    return true; // 删除成功，返回 true
+}
+```
+
+@tab 删除指定节点（Node）（除最后一个节点外）
+
+```c
+bool ListDelete(LNode *p) { // 删除指定节点 p
+    if (p == NULL) // 判断 p 是否为空
+        return false; // p 为空，返回 false
+    LNode *q = p->next; // q 指向第 i 个节点
+    p->data = q->data; // 将删除的元素赋值给 e （这里需要注意，如果删除的元素是最后一个元素，这边会报错，对于这种情况只能从头开始遍历进行删除操作）[!code warning]
+    p->next = q->next; // 将第 i - 1 个节点的指针域指向第 i + 1 个节点
+    free(q); // 释放第 i 个节点
+    return true; // 删除成功，返回 true
+}
+```
+
+:::
