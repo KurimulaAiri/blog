@@ -1,5 +1,5 @@
 ---
-title: 线性表
+title: 线性表上
 icon: database
 category: 
     - 数据结构
@@ -863,5 +863,169 @@ bool ListInsert(LinkList &L, int i, ElemType e) { // 在链表的第 i 个位置
 
 这里仍然以带头节点的单链表为例
 
-需要实现的功能是
+在之前已经初始化完毕一个带头节点的链表后，接下来就是往该链表内插入数据，对于插入数据，这里有两种插法，第一种是从尾部插入，称尾插法；第二种从头部插入，称头插法
+
+还有一种使用ListInsert(&L, i, e)的方法进行插入，具体过程为通过循环每次在 j + 1 处插入新数据，直到插入到最后一个元素，但是这样的插入方法会导致插入时间随着插入的元素增多而增大，效率不是很高，时间复制度为 $O(n^2)$ 
+
+尾插的原理就是创建一个公共指针指向下一次需要插入的位置，每次插入操作后都更新一次这个公共指针
+
+头插法则是循环在头节点之后插入新节点，可以看作每次都在头节点后进行后插操作，因此可以使用后插方法来进行
+
+两者的核心都是节点的初始化操作和后插操作
+
+::: tabs
+
+@tab 尾插法
+
+```c
+LinkList InsertListTail(LinkList &L) { // 尾插法建立单链表
+    int x; // x 为链表元素，这里的 int 可以为任意类型
+    L = (LinkList)malloc(sizeof(LNode)); // 生成头节点
+    LNode *s, *r = L; // r 为表尾指针
+    scanf("%d", &x); // 输入链表元素
+    while (x != 9999) { // 输入 9999 表示结束
+        s = (LNode *)malloc(sizeof(LNode)); // 生成新节点
+        s->data = x; // 将新节点数据域置为 x
+        r->next = s; // 将表尾指针指向新节点
+        r = s; // 将表尾指针指向新节点，作为新的表尾节点，此时 r 和 s 指向同一个节点
+        scanf("%d", &x); // 输入链表元素
+    }
+    r->next = NULL; // 尾节点指针置空
+    return L; // 返回头节点
+}
+```
+
+其时间复杂度为 $O(n)$
+
+@tab 头插法
+
+```c
+LinkList InsertListHead(LinkList &L) { // 头插法建立单链表
+    int x; // x 为链表元素
+    L = (LinkList)malloc(sizeof(LNode)); // 生成头节点
+    LNode *s; // s 为新建节点
+
+    /*
+     * 头节点指针置空，这一步很关键，和尾插法有区别 
+     * 不进行此操作的话尾节点可能会指向一个内存中的神秘区域，从而带来意想不到的结果 
+     */
+    
+    L->next = NULL; // [!code warning]
+    scanf("%d", &x); // 输入链表元素
+    while (x != 9999) { // 输入 9999 表示结束
+        s = (LNode *)malloc(sizeof(LNode)); // 生成新节点
+        s->data = x; // 将新节点数据域置为 x
+        s->next = L->next; // 将新节点插入到头节点之后
+        L->next = s; // 头节点指向新节点
+        scanf("%d", &x); // 输入链表元素
+    }
+    return L; // 返回头节点
+
+}
+```
+
+其时间复杂度为 $O(n)$
+
+:::
+
+对于如果有将一个链表逆置的需求，可以使用头插法进行逆置，具体过程为将链表头节点的 next 指针指向 NULL，然后循环将头节点的 next 指针指向新节点，新节点的 next 指针指向原头节点，然后头节点指向新节点，新节点指向原头节点的 next 节点，直到原头节点的 next 指针指向 NULL，此时链表逆置完成
+
+对于没有头节点的单链表的头尾插入有少许区别
+
+::: tabs
+
+@tab 尾插法（无头节点）
+
+```c
+LinkList InsertListTail(LinkList &L) { // 尾插法建立单链表
+    int x; // x 为链表元素
+    LNode *r, *s; // r 为表尾指针
+    if (L == NULL) {
+        scanf("%d", &x);
+        if (x != 9999) {
+            L = (LNode *)malloc(sizeof(LNode));
+            L->next = NULL;
+            L->data = x;
+        }
+    }
+    r = L;
+    scanf("%d", &x); // 输入链表元素
+    while (x != 9999) { // 输入 9999 表示结束
+        s = (LNode *)malloc(sizeof(LNode)); // 生成新节点
+        s->data = x; // 将新节点数据域置为 x
+        r->next = s; // 将表尾指针指向新节点
+        r = s; // 将表尾指针指向新节点，作为新的表尾节点，此时 r 和 s 指向同一个节点
+        scanf("%d", &x); // 输入链表元素
+    }
+    r->next = NULL; // 尾节点指针置空
+    return L; // 返回头节点
+}
+```
+
+@tab 头插法（无头节点）
+
+```c
+LinkList InsertListHead(LinkList &L) { 
+    int x; // x 为链表元素
+    LNode *s; // s 为新建节点
+    scanf("%d", &x);
+    while (x != 9999) {
+        s = (LNode *)malloc(sizeof(LNode));
+        s->data = x;
+        s->next = L;
+        L = s;
+        scanf("%d", &x);
+    }
+    return L;
+}
+```
+
+:::
+
+::: tabs
+
+@tab 单链表的逆置（有头节点）
+
+```c
+
+bool ReverseList(LinkList &L) {
+    LNode *p, *q;
+    p, q = L->next;
+    while (q->next != NULL) {
+        q = p->next;
+        p->next = q->next;
+        q->next = L->next;
+        L->next = q;
+        q = p;
+    }
+    return true;
+}
+
+```
+
+时间复杂度： $O(n)$ 
+
+@tab 单链表的逆置（无头节点）
+
+```c
+
+bool ReverseList(LinkList &L) {
+    LNode *p, *q;
+    p, q = L;
+    while (q->next != NULL) {
+        q = p->next;
+        p->next = q->next;
+        q->next = L;
+        L = q;
+        q = p;
+    }
+    return true;
+}
+
+```
+
+时间复杂度： $O(n)$
+
+:::
+
 
