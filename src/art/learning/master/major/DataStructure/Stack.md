@@ -1,6 +1,7 @@
 ---
 title: 栈
 icon: database
+order: 5
 category:
   - 数据结构
   - 考研
@@ -180,8 +181,190 @@ bool InitStack(ShStack &S) {
 S.top1 + 1 == S.top2 // 栈 1 的栈顶指针的下一个位置指向栈 2 的栈顶指针
 ```
 
+## 顺序栈小结
+
 ````markmap
+---
+markmap:
+    colorFreezeLevel: 2
+---
 
 # 顺序栈
 
+## 顺序存储，用静态数组实现，并需要记录栈顶指针
+
+## 基本操作
+
+### 创、增、删、查
+
+## 两种实现
+
+### 初始化时 top = -1
+
+- 入栈
+
+    - S.data[++S.top] = e
+
+- 出栈
+
+    - e = S.data[S.top--]
+
+- 获得栈顶元素
+
+    - e = S.data[S.top]
+
+- 栈空 / 栈满的条件是？
+
+    - 栈空：S.top == -1
+
+    - 栈满：S.top == MAXSIZE - 1
+
+### 初始化时 top = 0
+
+- 入栈
+
+    - S.data[S.top++] = e
+
+- 出栈
+
+    - e = S.data[--S.top]
+
+- 获得栈顶元素
+
+    - e = S.data[S.top - 1]
+
+- 栈空 / 栈满的条件是？
+
+    - 栈空：S.top == 0
+
+    - 栈满：S.top == MAXSIZE
+
+## 共享栈
+
+### 两个栈共享同一片连续的内存空间，两个栈从两边往中间扩展
+
+### 初始化
+
+- 一号栈顶指针初始为 -1，二号栈顶指针初始为 MAXSIZE
+
+### 栈满条件
+
+- top1 + 1 == top2;
+
 ````
+
+## 链栈
+
+链栈可以认为是一个单链表，只是只能进行头插头删操作
+
+链栈同样有带头结点的链栈和不带头结点的链栈，区别在于不带头结点的链栈的第一个结点就是栈顶结点
+
+```c title="链栈的定义"
+typedef struct SNode {
+    SElemType data;
+    struct SNode *next;
+} SNode, *LinkStack;
+```
+
+::: tabs
+
+@tab 带头结点
+
+```c title="链栈的初始化"
+bool InitStack(LinkStack &S) {
+    S = (LinkStack)malloc(sizeof(SNode)); // 创建头结点
+    if (S == NULL) // 内存分配失败
+        return false; // 返回错误
+    S->next = NULL; // 头结点的 next 为 NULL
+    return true;
+}
+```
+
+```c title="链栈的入栈"
+bool Push(LinkStack &S, SElemType e) {
+    LinkStack p = (LinkStack)malloc(sizeof(SNode)); // 创建新结点
+    if (p == NULL) // 内存分配失败
+        return false; // 返回错误
+    p->data = e; // 新结点的数据域为 e
+    p->next = S->next; // 新结点的 next 指向头结点的 next
+    S->next = p; // 头结点的 next 指向新结点
+    return true;
+}
+```
+
+```c title="链栈的出栈"
+bool Pop(LinkStack &S, SElemType &e) {
+    if (S->next == NULL) // 栈空
+        return false; // 返回错误
+    LinkStack p = S->next; // p 指向栈顶结点
+    e = p->data; // e 为栈顶结点的数据域
+    S->next = p->next; // 头结点的 next 指向栈顶结点的 next
+    free(p); // 释放栈顶结点
+    return true;
+}
+```
+
+```c title="链栈的取栈顶元素"
+bool GetTop(LinkStack S, SElemType &e) {
+    if (S->next == NULL) // 栈空
+        return false; // 返回错误
+    e = S->next->data; // e 为栈顶结点的数据域
+    return true;
+}
+```
+
+```c title="链栈的判空"
+bool Empty(LinkStack S) {
+    return S->next == NULL;
+}
+```
+
+@tab 不带头结点
+
+```c title="链栈的初始化"
+bool InitStack(LinkStack &S) {
+    S = NULL; // 头结点为空
+    return true;
+}
+```
+
+```c title="链栈的入栈"
+bool Push(LinkStack &S, SElemType e) {
+    LinkStack p = (LinkStack)malloc(sizeof(SNode)); // 创建新结点
+    if (p == NULL) // 内存分配失败
+        return false; // 返回错误
+    p->data = e; // 新结点的数据域为 e
+    p->next = S; // 新结点的 next 指向头结点
+    S = p; // 头结点指向新结点
+    return true;
+}
+```
+
+```c title="链栈的出栈"
+bool Pop(LinkStack &S, SElemType &e) {
+    if (S == NULL) // 栈空
+        return false; // 返回错误
+    LinkStack p = S; // p 指向栈顶结点
+    e = p->data; // e 为栈顶结点的数据域
+    S = p->next; // 头结点指向栈顶结点的 next
+    free(p); // 释放栈顶结点
+    return true;
+}
+```
+
+```c title="链栈的取栈顶元素"
+bool GetTop(LinkStack S, SElemType &e) {
+    if (S == NULL) // 栈空
+        return false; // 返回错误
+    e = S->data; // e 为栈顶结点的数据域
+    return true;
+}
+```
+
+```c title="链栈的判空"
+bool Empty(LinkStack S) {
+    return S == NULL;
+}
+```
+
+:::

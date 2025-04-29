@@ -1,6 +1,7 @@
 ---
 title: 线性表上
 icon: database
+order: 3
 category: 
     - 数据结构
     - '408'

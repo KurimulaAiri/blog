@@ -1,6 +1,7 @@
 ---
 title: 算法
 icon: 'database'
+order: 2
 category:
     - '数据结构'
     - '408'

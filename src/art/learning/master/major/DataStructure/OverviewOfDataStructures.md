@@ -1,6 +1,7 @@
 ---
 title: 数据结构概论
 icon: 'database'
+order: 1
 category:
   - '408'   
   - '数据结构'
