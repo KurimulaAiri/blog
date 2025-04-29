@@ -109,3 +109,22 @@ bool DeleteNextDNode(DNode *p) {
 
 ```
 
+#### 双链表的遍历
+
+```c
+// 使用循环遍历双链表
+// 后向遍历
+while (p != NULL) {
+    // 处理 p 节点的位置
+    p = p->next;
+}
+
+// 前向遍历
+while (p != NULL) {
+    // 处理 p 节点的位置
+    p = p->prior;
+}
+
+
+```
+

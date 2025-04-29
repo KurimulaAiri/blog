@@ -214,8 +214,14 @@ export default hopeTheme({
     },
 
     icon: {
-      assets: "fontawesome",
-      prefix: "fa-solid ",
+      assets: [
+        // "fontawesome",
+        "https://cdn.bootcdn.net/ajax/libs/font-awesome/6.7.2/js/all.min.js",
+        "https://cdn.bootcdn.net/ajax/libs/font-awesome/6.7.2/css/all.min.css",
+        "https://cdn.bootcdn.net/ajax/libs/font-awesome/6.7.2/js/regular.min.js",
+        "https://cdn.bootcdn.net/ajax/libs/font-awesome/6.7.2/css/regular.min.css",
+      ],
+      prefix: "fa-solid fa-"
     },
 
     // install @vuepress/plugin-pwa and uncomment these if you want a PWA
