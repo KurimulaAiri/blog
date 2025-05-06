@@ -61,6 +61,12 @@ $$
 
 2. 若$a < 0$，则$|x| > a \Leftrightarrow -a < x < a$;
 
-3. 若$b > a > 0$，则$a <= |x| < b \Leftrightarrow a <= x < b 或 -b < x <= -a$
+3. 若$b > a > 0$，则$a \le |x| < b \Leftrightarrow a \le x < b 或 -b < x \le -a$
 
 4. $|ax + b| > c (c > 0)$ 可转化为 1. ; $|ax + b| < c (c > 0)$ 可转化为 2. ;
+
+5. 均值不等式：$\frac{2}{\frac{1}{a} + \frac{1}{b}} \le \sqrt{ab} \le \frac{a + b}{2} \le \sqrt{\frac{a^2 + b^2}{2}} (a, b > 0)$
+
+上面的式子分别代表了$a, b$ 的调和平均值、算术平均值、几何平均值、均方根
+
+6. 三角不等式：$\bigm||a| - |b|\bigm| \le |a + b| \le |a| + |b|$
