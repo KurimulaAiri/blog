@@ -214,6 +214,12 @@ export default hopeTheme({
       components: ["Badge", "VPCard", "VidStack"],
     },
 
+    docsearch: {
+      appId: "ULF54MS9H5",
+      apiKey: "d296aaf2e969fd87b7d9911681d6dafe",
+      indexName: "md-s1r0ko",
+    },
+
     icon: {
       assets: [
         // "fontawesome",
