@@ -218,9 +218,7 @@ export default hopeTheme({
       appId: "ULF54MS9H5",
       apiKey: "dd5971a09c604a9a48c9f9b00b1524a1",
       indexName: "md-s1r0ko",
-      insights: true,
       // container: "### REPLACE ME WITH A CONTAINER (e.g. div) ###",
-      debug: false
     },
 
     icon: {
