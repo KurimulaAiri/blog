@@ -58,14 +58,19 @@ projects:
   #  link: https://你的自定义链接
   
   - icon: link
-    name:   theme-hope文档
+    name: theme-hope文档
     desc: 主题文档
     link: https://theme-hope.vuejs.press/zh/
 
   - icon: database
     name: 数据结构
-    desc: 考研数据结构学习笔记
+    desc: 王道考研计算机数据结构学习笔记
     link: /art/learning/master/major/DataStructure/
+
+  - icon: calculator
+    name: 高等数学
+    desc: 张宇考研数学学习笔记
+    link: /art/learning/master/math/FurtherMathematics/
 
 footer: <a href='//beian.miit.gov.cn'>闽ICP备2025092620号-1</a>
 ---

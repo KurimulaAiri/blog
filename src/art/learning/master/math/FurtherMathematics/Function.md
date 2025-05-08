@@ -5,6 +5,7 @@ order: 9
 category:
   - 数学
   - 考研
+  - 高数
 tag:
   - 零基础
 ---
