@@ -101,6 +101,32 @@ $$
 
 ## 反三角函数
 
-1. $y = \sin x$ 的反函数
+1. $y = \sin x$ 的反函数 $x = \arcsin y$
 
 当 $2n\pi - \frac{\pi}{2} < x < 2n\pi + \frac{\pi}{2}$ 时，$y = \sin x$ 单调递增；当 $2n\pi + \frac{\pi}{2} < x < 2(n + 1) \pi - \frac{\pi}{2}$ 时，$y = \sin x$ 单调递减，所以当 $n = 0, \pm 1, \pm 2, \cdots$ 时，$x$ 可以分割为一段段长度为 $\pi$ 的区间，使得 $y = \sin x$ 在每个小区间内单调递增或单调递减，取 $-\frac{\pi}{2} \leq x \leq \frac{\pi}{2}$ 这一段所决定的反函数，叫做 $y = \sin x$ 的反函数的主值，用符号 $x = \arcsin y$ 表示（arc 是英文中的弧长，arcsin 就是其正弦值等于 y 的弧长，因为角度是用单位圆上的弧长来度量的）
+
+2. $y = \cos x$ 的反函数 $x = \arccos y$
+
+当 $2n\pi < x < (2n + 1)\pi$ 时，$y = \cos x$ 单调递减；当 $(2n + 1)\pi < x < (2n + 2) \pi$ 时，$y = \cos x$ 单调递增，所以当 $n = 0, \pm 1, \pm 2, \cdots$ 时，$x$ 可以分割为 $[m\pi, (m + 1)\pi](m \in Z)$ 这样一段段区间，使得 $y = \cos x$ 在每个小区间内单调递增或单调递减，我们通常取 $0 \leq x \leq \pi$ 这一段所决定的反函数，叫做 $y = \cos x$ 的反函数的主值，用符号 $x = \arccos y$ 表示
+
+3. $y = \tan x$ 的反函数 $x = \arctan y$
+
+曲线 $y = \tan x$ ，以 $\big(n\pi - \frac{\pi}{2}, n\pi + \frac{\pi}{2}\big)(n \in Z)$ 分成逐段递增的曲线分支，取 $-\frac{\pi}{2} < x < \frac{\pi}{2}$ 这一支作为 $y = \tan x$ 的反函数的主值，用符号 $x = arctan y$ 表示
+
+## 函数的一些变换规则
+
+假设有函数 $y = f(x)$ 有以下变换
+$$
+
+y = f(x) 
+\begin{cases}
+
+y = f(x) \pm y_0, \text{（函数上下平移距离 k ，上加下减）} \\
+y = f(x \pm x_0), \text{（函数左右平移距离 k ，左加右减）} \\
+y = kf(x)(k > 0), \text{（函数垂直伸长 k 倍）} \\
+y = f(kx)(k > 0), \text{（函数水平伸长至 $\frac{1}{k}$ 倍）} \\
+
+\end{cases}
+
+$$
+
