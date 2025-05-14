@@ -113,6 +113,8 @@ $$
 
 曲线 $y = \tan x$ ，以 $\big(n\pi - \frac{\pi}{2}, n\pi + \frac{\pi}{2}\big)(n \in Z)$ 分成逐段递增的曲线分支，取 $-\frac{\pi}{2} < x < \frac{\pi}{2}$ 这一支作为 $y = \tan x$ 的反函数的主值，用符号 $x = arctan y$ 表示
 
+- [其他相关常用结论](../Other.md)
+
 ## 函数的一些变换规则
 
 假设有函数 $y = f(x)$ 有以下变换

@@ -20,7 +20,7 @@ $ax^2 + bx + c = 0 ( a \neq 0 )$ 为一元二次方程，记 $\Delta = b^2 - 4ac
 
 - 当 $\Delta < 0$ 时， $\sqrt{\Delta} = \sqrt{-\Delta \cdot i^2} = \sqrt{-\Delta} i$，方程有两个不相等的共轭复数根， $x_{1,2} = \frac{-b \pm \sqrt{-\Delta}i}{2a}$
 
-## 一元 n 次方程根与系数的关系
+## 一元 $n$ 次方程根与系数的关系
 
 设 $f(x) = a_nx^n + a_{n-1}x^{n-1} + \cdots + a_1x + a_0 = 0 ( a_n \neq 0)$ 的根为 $x_1, x_2, \cdots, x_n$，则
 

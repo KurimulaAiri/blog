@@ -35,7 +35,7 @@ tag:
 | $\not=$ | `\not=` | $\not\subset$ | `\not\subset` | $\subset$ | `\subset` | $\supset$ | `\supset` | $\subseteq$ | `\subseteq` |
 | $\supseteq$ | `\supseteq` | $\cup$ | `\cup` | $\cap$ | `\cap` | $\leq$ | `\leq` | $\geq$ | `\geq` |
 
-
+## Katex 公式对齐
 
 
 ## 参考
