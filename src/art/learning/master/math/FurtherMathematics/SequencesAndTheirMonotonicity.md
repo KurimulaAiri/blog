@@ -1,5 +1,6 @@
 ---
 title: 数列及其单调性
+date: 2025-05-14
 icon: calculator
 order: 13
 category:

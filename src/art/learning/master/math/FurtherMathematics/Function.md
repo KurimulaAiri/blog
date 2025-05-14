@@ -1,5 +1,6 @@
 ---
 title: 函数
+date: 2025-05-07
 icon: calculator
 order: 9
 category:

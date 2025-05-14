@@ -1,5 +1,6 @@
 ---
 title: 方程与不等式
+date: 2025-05-06
 icon: calculator
 order: 5
 category:

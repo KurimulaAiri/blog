@@ -129,6 +129,7 @@ export default hopeTheme({
     component: true,
     demo: true,
     figure: true,
+    footnote: true, // 脚注
     gfm: true,
     imgLazyload: true,
     imgSize: true,
@@ -156,7 +157,7 @@ export default hopeTheme({
     tasklist: true,
     vPre: true,
 
-    highlighter: {
+    highlighter: { // 代码行内高亮
       type: "shiki",
       notationDiff: true,
       collapsedLines: true,

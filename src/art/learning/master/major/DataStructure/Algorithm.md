@@ -1,5 +1,6 @@
 ---
 title: 算法
+date: 2025-04-21
 icon: 'database'
 order: 2
 category:
