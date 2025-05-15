@@ -68,6 +68,11 @@ export const zhNavbar = navbar([
             text: "Latex速查表",
             icon: "pen-to-square",
             link: "LaTex",
+          },
+          {
+            text: "测试用",
+            icon: "code",
+            link: "Test",
           }
         ]
       }
