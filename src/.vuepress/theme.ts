@@ -12,6 +12,7 @@ export default hopeTheme({
   },
   logo: "//store.s1r0ko.top/images/logo.png",
   favicon: "favicon.ico",
+  fullscreen: true,
   repo: "KurimulaAiri/blog",
   docsDir: "src",
   docsBranch: "master",
@@ -124,6 +125,7 @@ export default hopeTheme({
   // These features are enabled for demo, only preserve features you need here
   markdown: {
     align: true,
+    alert: true,
     attrs: true,
     codeTabs: true,
     component: true,
@@ -131,6 +133,7 @@ export default hopeTheme({
     figure: true,
     footnote: true, // 脚注
     gfm: true,
+    hint: true,
     imgLazyload: true,
     imgSize: true,
     include: true,
