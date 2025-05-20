@@ -67,6 +67,11 @@ projects:
     desc: 王道考研计算机数据结构学习笔记
     link: /art/learning/master/major/DataStructure/
 
+  - icon: earth-americas
+    name: 计算机网络
+    desc: 王道考研计算机网络学习笔记
+    link: /art/learning/master/major/ComputerNetworks/
+
   - icon: calculator
     name: 高等数学
     desc: 张宇考研数学学习笔记
