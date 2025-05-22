@@ -106,3 +106,11 @@ $$
 z_3 = W_3^TH_2 + b_3 = \begin{bmatrix} 0.5 & 0.5 \\ \end{bmatrix} \begin{bmatrix} 0.31 \\ 0 \\ \end{bmatrix} + \begin{bmatrix} 0.4 \\ \end{bmatrix} = 0.555 
 
 $$
+
+## 计算智能
+
+$$
+
+y = 10 + \frac{\sin{\frac{1}{x}}}{(x - 0.16)^2 + 0.1}, x \in [0, 1]
+
+$$
