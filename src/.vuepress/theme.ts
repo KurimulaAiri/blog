@@ -293,4 +293,9 @@ export default hopeTheme({
     //   },
     // },
   },
-});
+},
+  {
+    // 开启组件自定义
+    custom: true,
+  }
+);
