@@ -7,6 +7,7 @@ const __dirname = new URL(".", import.meta.url).pathname;
 export default defineUserConfig({
   base: "/",
   lang: "zh-CN",
+  head: [["script", {src: "/.vuepress/components/js/sidebar.js"}]],
   locales: {
     "/": {
       lang: "zh-CN",

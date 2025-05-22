@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>滚动条自动隐藏示例</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      height: 100vh;
+      overflow: hidden;
+      font-family: sans-serif;
+    }
+
+    .scroll-container {
+      width: 100%;
+      height: 100%;
+      overflow-y: scroll;
+      padding: 20px;
+      box-sizing: border-box;
+      scrollbar-width: none; /* Firefox 隐藏滚动条 */
+      -ms-overflow-style: none;  /* IE/Edge */
+    }
+
+    .scroll-container::-webkit-scrollbar {
+      width: 8px;
+    }
+
+    .scroll-container::-webkit-scrollbar-thumb {
+      background-color: rgba(100, 100, 100, 0.5);
+      border-radius: 4px;
+      transition: background-color 0.3s;
+    }
+
+    .scroll-container.hide-scrollbar::-webkit-scrollbar-thumb {
+      background-color: transparent;
+    }
+
+    .content {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .section {
+      margin-bottom: 40px;
+    }
+
+    h2 {
+      margin-top: 0;
+      color: #333;
+    }
+
+    p {
+      line-height: 1.6;
+      color: #555;
+    }
+  </style>
+</head>
+<body>
+  <div class="scroll-container" id="scrollBox">
+    <div class="content">
+      <!-- 生成一些段落让页面可以滚动 -->
+      <div class="section">
+        <h2>介绍</h2>
+        <p>这是一个滚动区域，当你滚动时，滚动条会显示出来，3秒不动就会自动隐藏。</p>
+      </div>
+
+      <!-- 多段内容让它可以滚动 -->
+      <div class="section">
+        <h2>段落 1</h2>
+        <p>当代社会节奏加快，人们越来越依赖各种智能设备来提高生活与工作的效率。然而，这也带来了诸如信息过载、注意力分散等问题。</p>
+      </div>
+
+      <div class="section">
+        <h2>段落 2</h2>
+        <p>我们应当学会适度使用科技产品，合理安排作息时间，保持身心健康，同时充分利用技术带来的便利。</p>
+      </div>
+
+      <div class="section">
+        <h2>段落 3</h2>
+        <p>在网页设计中，为了提供更优雅的用户体验，隐藏滚动条是一种常见做法。它既保留了功能，又不会干扰页面美感。</p>
+      </div>
+
+      <div class="section">
+        <h2>段落 4</h2>
+        <p>本页面的滚动条在你滚动的时候会显示，3秒钟不动就会自动隐藏，非常适合阅读型页面或干净的布局设计。</p>
+      </div>
+
+      <div class="section">
+        <h2>段落 5</h2>
+        <p>你可以根据需要调整隐藏时间、样式，也可以扩展为左右滚动、动画渐隐等高级功能。</p>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const scrollBox = document.getElementById('scrollBox');
+    let hideTimeout = null;
+
+    function showScrollbar() {
+      scrollBox.classList.remove('hide-scrollbar');
+      if (hideTimeout) clearTimeout(hideTimeout);
+      hideTimeout = setTimeout(() => {
+        scrollBox.classList.add('hide-scrollbar');
+      }, 3000); // 停止滚动 3 秒后隐藏滚动条
+    }
+
+    scrollBox.addEventListener('scroll', showScrollbar);
+
+    // 初始时隐藏滚动条
+    scrollBox.classList.add('hide-scrollbar');
+  </script>
+</body>
+</html>

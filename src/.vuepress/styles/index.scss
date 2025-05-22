@@ -16,18 +16,53 @@
     background-color: var(--logo-background-color);
 }
 
-.vds-title-text, .vds-time {
+.vds-title-text,
+.vds-time {
     color: var(--vds-font-color)
 }
 
-.vp-navbar {    
+.vp-navbar {
     width: 100vw;
 }
 
+// 红色信息
 #red-msg {
     color: #E53939;
 }
 
+// 蓝色信息
 #blue-msg {
-    color: #92dcd3; 
+    color: #92dcd3;
+}
+
+
+// 侧边栏滚动条隐藏
+
+.vp-sidebar {
+    overflow-y: scroll;
+    //   box-sizing: border-box;
+    scrollbar-width: thin;
+    /* Firefox 隐藏滚动条 */
+    // -ms-overflow-style: none;
+    /* IE/Edge */
+}
+
+.vp-sidebar::-webkit-scrollbar {
+    width: 12px;
+}
+
+.vp-sidebar::-webkit-scrollbar-thumb {
+    //   background-color: rgba(100, 100, 100, 0.5);
+    //   border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.vp-sidebar.hide-scrollbar::-webkit-scrollbar-thumb {
+    scrollbar-width: thin;
+    background-color: transparent;
+}
+
+.vp-sidebar.hide-scrollbar {
+    scrollbar-width: none;
+    background-color: transparent;
 }
