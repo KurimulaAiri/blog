@@ -42,13 +42,14 @@
     overflow-y: scroll;
     //   box-sizing: border-box;
     scrollbar-width: thin;
+    scrollbar-color: rgba(0, 0, 0, 0);
     /* Firefox 隐藏滚动条 */
     // -ms-overflow-style: none;
     /* IE/Edge */
 }
 
 .vp-sidebar::-webkit-scrollbar {
-    width: 12px;
+    width: 4px;
 }
 
 .vp-sidebar::-webkit-scrollbar-thumb {
@@ -58,7 +59,7 @@
 }
 
 .vp-sidebar.hide-scrollbar::-webkit-scrollbar-thumb {
-    scrollbar-width: thin;
+    scrollbar-width: none;
     background-color: transparent;
 }
 

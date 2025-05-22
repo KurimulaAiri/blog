@@ -2,8 +2,6 @@ const scrollBox = document.getElementById('sidebar');
 let hideTimeout = null;
 
 function showScrollbar() {
-    console.log("in");
-    
     scrollBox.classList.remove('hide-scrollbar');
     if (hideTimeout) clearTimeout(hideTimeout);
     hideTimeout = setTimeout(() => {
