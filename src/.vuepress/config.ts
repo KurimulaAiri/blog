@@ -5,7 +5,7 @@ import theme from "./theme.js";
 const __dirname = new URL(".", import.meta.url).pathname;
 
 export default defineUserConfig({
-  base: "/",
+  base: "/blog/",
   lang: "zh-CN",
   head: [["script", {src: "/.vuepress/components/js/sidebar.js"}]],
   locales: {
