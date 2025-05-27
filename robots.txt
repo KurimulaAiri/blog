@@ -2,4 +2,4 @@
 User-agent:*
 Disallow:
 
-Sitemap: https://md.s1r0ko.top/blog/sitemap.xml
+Sitemap: https://md.s1r0ko.top/sitemap.xml
