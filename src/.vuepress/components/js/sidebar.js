@@ -6,7 +6,7 @@ function showScrollbar() {
     if (hideTimeout) clearTimeout(hideTimeout);
     hideTimeout = setTimeout(() => {
         scrollBox.classList.add('hide-scrollbar');
-    }, 3000); // 停止滚动 3 秒后隐藏滚动条
+    }, 2000); // 停止滚动 2 秒后隐藏滚动条
 }
 
 scrollBox.addEventListener('scroll', showScrollbar);
