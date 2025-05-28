@@ -35,42 +35,42 @@
     color: #92dcd3;
 }
 
+html {
+    overflow-y: scroll;
+    scrollbar-width: unset;
+    scrollbar-color: unset;
+}
 
 // 侧边栏滚动条隐藏
-
 .vp-sidebar {
+
     overflow-y: scroll;
-    //   box-sizing: border-box;
-    scrollbar-width: thin;
-    // scrollbar-color: rgba(0, 0, 0, 0);
-    /* Firefox 隐藏滚动条 */
-    -ms-overflow-style: none;
-    /* IE/Edge */
-    // transition: opacity 0.5s ease;
+    scrollbar-width: unset;
+    scrollbar-color: unset;
 
     &::-webkit-scrollbar {
-        width: 4px;
+        width: 3px;
+        opacity: 0;
+        background-color: #3c3f44;
     }
 
     &::-webkit-scrollbar-thumb {
-        //   background-color: rgba(100, 100, 100, 0.5);
-        //   border-radius: 4px;
+        background-color: rgb(58.8802083333, 183.3697916667, 168.2291666667);
         opacity: 1;
-        transition: opacity 0.5s ease;
+        transition: background-color 1s ease;
+    }
+
+    &.hide-scrollbar::-webkit-scrollbar-track-piece {
+        background-color: rgb(27, 27, 31);
+    }
+
+    &.hide-scrollbar::-webkit-scrollbar-track {
+        background-color: rgb(27, 27, 31);
     }
 
     &.hide-scrollbar::-webkit-scrollbar-thumb {
-        opacity: 0;
-        scrollbar-width: none;
-        background-color: transparent;
-        transition: opacity 0.5s ease;
-
-    }
-
-    &.hide-scrollbar {
-        scrollbar-width: none;
-        background-color: transparent;
-        transition: opacity 0.5s ease;
+        background-color: rgba(59, 183, 169, 0);
+        transition: background-color 1s ease;
     }
 
 }
