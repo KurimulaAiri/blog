@@ -25,7 +25,7 @@ bgImageDarkStyle:
   - webkit-filter: blur(5px)
   - opacity: '0.7'
 
-tagline: '<p style="color: #000; -webkit-text-stroke: 1px solid #888; bold: true">一条咸鱼</p>'
+tagline: # '<p style="color: #000; -webkit-text-stroke: 1px solid #888; bold: true">一条咸鱼</p>'
 projects:
   #- icon: folder-open
   #  name: 项目名称
