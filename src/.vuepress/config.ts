@@ -7,7 +7,7 @@ const __dirname = new URL(".", import.meta.url).pathname;
 export default defineUserConfig({
   base: "/",
   lang: "zh-CN",
-  head: [["script", {src: "/extra/sidebar_scrollbar.js"}]],
+  head: [["script", { src: "/extra/sidebar_scrollbar.js" }]],
   locales: {
     "/": {
       lang: "zh-CN",
@@ -30,7 +30,7 @@ export default defineUserConfig({
     //   __dirname,
     //   "./components/HomePage.vue",
     // ),
-  }
+  },
 
   // Enable it with pwa
   // shouldPrefetch: false,

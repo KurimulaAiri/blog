@@ -1,4 +1,10 @@
 // place your custom styles here
+
+@font-face {
+    font-family: AaCute;
+    src: url(https://store.s1r0ko.top/woff/AaCute.woff), format('woff');
+}
+
 .vp-blog-hero-title {
     color: var(--vp-c-accent-hover);
     -webkit-text-stroke: 1px var(--vp-c-accent);

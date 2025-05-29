@@ -95,7 +95,7 @@ export default hopeTheme({
       displayFooter: true,
 
       blog: {
-        description: "一个正在学习的学生",
+        description: "咸鱼",
         intro: "/intro.html",
       },
 
