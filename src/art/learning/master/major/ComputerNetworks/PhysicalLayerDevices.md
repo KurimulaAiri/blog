@@ -71,5 +71,7 @@ markmap:
 
 - 集线器、中继器 不能“无限串联” —— 如：10Base5 的 5-4-3 原则[^1]
 
+- [集线器连接的网络，物理上是星形拓扑，逻辑上是总线形拓扑](/art/learning/master/major/ComputerNetworks/ClassificationOfComputerNetworks.html#按拓扑结构分类)
+
 
 [^1]: 10Base5 的 5-4-3 原则：使用集线器（或中继器）连接 10Base5 网段时，最多只能串联 **5 个网段**，使用 **4 台集线器（或中继器）**，只有 **3 个网段**可以挂接计算机。
