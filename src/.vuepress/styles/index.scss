@@ -51,26 +51,31 @@ html {
     &::-webkit-scrollbar {
         width: 3px;
         opacity: 0;
-        background-color: #3c3f44;
+        background-color: var(--vp-sidebar-scrollbar-background-color);
     }
 
     &::-webkit-scrollbar-thumb {
-        background-color: rgb(58.8802083333, 183.3697916667, 168.2291666667);
-        opacity: 1;
-        transition: background-color 1s ease;
+        background-color: rgb(101, 192, 177);
+    }
+
+    &::-webkit-scrollbar-track-piece {
+        background-color: var(--vp-sidebar-scrollbar-background-color);
+    }
+
+    &::-webkit-scrollbar-track {
+        background-color: var(--vp-sidebar-scrollbar-background-color);
     }
 
     &.hide-scrollbar::-webkit-scrollbar-track-piece {
-        background-color: rgb(27, 27, 31);
+        background-color: var(--vp-sidebar-scrollbar-hidden-background-color);
     }
 
     &.hide-scrollbar::-webkit-scrollbar-track {
-        background-color: rgb(27, 27, 31);
+        background-color: var(--vp-sidebar-scrollbar-hidden-background-color);
     }
 
     &.hide-scrollbar::-webkit-scrollbar-thumb {
-        background-color: rgba(59, 183, 169, 0);
-        transition: background-color 1s ease;
+        background-color: var(--vp-sidebar-scrollbar-hidden-background-color);
     }
 
 }

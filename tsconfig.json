@@ -7,7 +7,7 @@
   "include": [
     "src/.vuepress/**/*.ts",
     "src/.vuepress/**/*.vue"
-, "src/.vuepress/public/components/js/sidebar.js"  ],
+, "src/.vuepress/public/extra/sidebar_scrollbar.js"  ],
   "exclude": [
     "node_modules"
   ]
