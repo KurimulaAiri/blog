@@ -42,7 +42,7 @@ markmap:
 
 ### 透明传输
 
-- 接收方链路层要能从收到的帧内恢复原始SDU，让网络层“感受不到”将分组封装成帧的过程
+- 接收方链路层要能从收到的帧内恢复原始[SDU](/art/learning/master/major/ComputerNetworks/HierarchicalStructure.html#%E6%95%B0%E6%8D%AE%E4%BC%A0%E8%BE%93%E8%BF%87%E7%A8%8B-%E5%9E%82%E7%9B%B4)，让网络层“感受不到”将分组封装成帧的过程
 
 ## 差错控制
 
