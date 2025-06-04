@@ -90,7 +90,7 @@ export default hopeTheme({
       // sidebar
       sidebar: zhSidebar,
 
-      footer: "<a href='//beian.miit.gov.cn'>闽ICP备2025092620号-1</a> | <a href='https://icp.gov.moe/?keyword=20250596' target='_blank'>萌ICP备20250596号</a>",
+      footer: "<a href='//beian.miit.gov.cn'>闽ICP备2025092620号-1</a> | <a href='//icp.gov.moe/?keyword=20250596' target='_blank'>萌ICP备20250596号</a>",
 
       displayFooter: true,
 
