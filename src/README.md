@@ -77,7 +77,7 @@ projects:
     desc: 张宇考研数学学习笔记
     link: /art/learning/master/math/FurtherMathematics/
 
-footer: <a href='//beian.miit.gov.cn'>闽ICP备2025092620号-1</a>
+footer: <a href='//beian.miit.gov.cn'>闽ICP备2025092620号-1</a>  |  <a href="https://icp.gov.moe/?keyword=20250596" target="_blank">萌ICP备20250596号</a>
 ---
 
 <!-- 这是一个博客主页的案例。
