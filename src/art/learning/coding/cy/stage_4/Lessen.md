@@ -13,6 +13,7 @@ tag:
   - redis
   - springcloud
   - nacos
+  - RocketMQ
 ---
 
 ## 四阶段笔记
@@ -65,13 +66,13 @@ https://start.aliyun.com
 
 配置信息通过脚手架创建
 
-![image-20250219140522783](C:\Users\10953\AppData\Roaming\Typora\typora-user-images\image-20250219140522783.png)
+![image-20250219140522783](//store.s1r0ko.top/images/cy_s4_p1_ver1.png)
 
-![image-20250219140711508](C:\Users\10953\AppData\Roaming\Typora\typora-user-images\image-20250219140711508.png)
+![image-20250219140711508](//store.s1r0ko.top/images/cy_s4_p2_ver1.png)
 
 通过maven创建项目
 
-![image-20250219143034436](C:\Users\10953\AppData\Roaming\Typora\typora-user-images\image-20250219143034436.png)
+![image-20250219143034436](//store.s1r0ko.top/images/cy_s4_p3_ver1.png)
 
 修改maven文件导入依赖
 
@@ -115,7 +116,7 @@ https://start.aliyun.com
 
 ```
 
-主函数配置![image-20250219143135970](C:\Users\10953\AppData\Roaming\Typora\typora-user-images\image-20250219143135970.png)
+主函数配置![image-20250219143135970](//store.s1r0ko.top/images/cy_s4_p4_ver1.png)
 
 配置注解
 
@@ -135,7 +136,7 @@ https://start.aliyun.com
 
 
 
-![image-20250219144936603](C:\Users\10953\AppData\Roaming\Typora\typora-user-images\image-20250219144936603.png)
+![image-20250219144936603](//store.s1r0ko.top/images/cy_s4_p5_ver1.png)
 
 没有配置数据库导致的
 
@@ -145,7 +146,7 @@ https://start.aliyun.com
 
 mybatis的相关配置
 
-![image-20250219161421386](C:\Users\10953\AppData\Roaming\Typora\typora-user-images\image-20250219161421386.png)
+![image-20250219161421386](//store.s1r0ko.top/images/cy_s4_p6_ver1.png)
 
 拦截器：
 
@@ -1158,4 +1159,4 @@ mq消息队列：流量的削峰 业务的解构，使用普通消息、延时�
 
 
 
-![image-20250312160139284](assets/image-20250312160139284.png)
+![image-20250312160139284](//store.s1r0ko.top/images/cy_s4_p7_ver1.png)
