@@ -13,4 +13,4 @@ tag:
 
 <!-- <PDF url="//store.s1r0ko.top/pdf/RocketMQ.pdf" /> -->
 
-<PDF url="//theme-hope-assets.vuejs.press/files/sample.pdf" />
+<PDF url="//store.s1r0ko.top/pdf/RocketMQ.pdf" />
