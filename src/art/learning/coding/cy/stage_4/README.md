@@ -10,3 +10,5 @@ category:
   - 学习
   - 四阶段
 ---
+
+<Catalog />

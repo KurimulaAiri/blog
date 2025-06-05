@@ -10,3 +10,5 @@ category:
   - 学习
   - 三阶段
 ---
+
+<Catalog />

@@ -4,13 +4,13 @@
     font-family: 'AaCute';
     font-weight: normal;
     font-style: normal;
-    src: url(https://store.s1r0ko.top/woff/AaCute.woff) format('woff');
+    src: url(//store.s1r0ko.top/woff/AaCute.woff2) format('woff2');
     // src: url('/assets/woff/AaCute.woff'), format('woff');
 }
 
 .vp-blog-hero-title {
     color: var(--vp-c-accent-hover);
-    -webkit-text-stroke: 1px var(--vp-c-accent);
+    -webkit-text-stroke: 0.1px #73d7c7;
 }
 
 .vp-nav-logo {
@@ -42,6 +42,10 @@
 // 蓝色信息
 #blue-msg {
     color: #92dcd3;
+}
+
+body {
+   font-synthesis: weight style small-caps;
 }
 
 html {

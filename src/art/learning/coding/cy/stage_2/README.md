@@ -10,3 +10,5 @@ category:
   - 学习
   - 二阶段
 ---
+
+<Catalog />
