@@ -18,63 +18,53 @@ tag:
 
 ## 学习大纲
 
-1、springboot
+- springboot
 
-2、nginx
+- nginx
 
-3、redis
+- redis
 
-4、微服务 --- springcloud
+- 微服务 —— springcloud
 
+案例：京东秒杀平台
 
+四阶段需要解决的问题：**高并发、高可用、高性能**
 
-案例：秒杀
-
-
-
-解决 高并发、高可用、高性能
-
-
-
-三阶段问题：依赖太多，配置太多
+三阶段问题：依赖太多，配置文件太多
 
 解决方法：使用springboot
 
-### springboot
+## L1 springboot
 
-启动器 ---- spring-boot-starter-xxx 默认配置
+启动器 —— spring-boot-starter-xxx 默认配置
 
-约束大于配置
-
-
+springboot思想：约束大于配置
 
 创建springboot项目：
 
-idea脚手架、maven
+可使用的方法：idea脚手架、maven
 
-springboot2 spring5.0 支持jdk 8
+::: warning 注意
+
+springboot2 spring5.0 支持jdk 8 
 
 springboot3 spring6.0 支持jdk17
 
+使用idea创建时需要使用阿里云镜像，才能使用jdk 8 
+
+`https://start.aliyun.com`
+
+:::
+
+![使用idea springboot脚手架创建](//store.s1r0ko.top/images/cy_s4_p1_ver1.png)
+
+![添加需要的依赖项](//store.s1r0ko.top/images/cy_s4_p2_ver1.png)
+
+![通过maven创建项目](//store.s1r0ko.top/images/cy_s4_p3_ver1.png)
 
 
-https://start.aliyun.com
+```xml title='修改maven文件导入依赖'
 
-阿里云镜像、才能使用jdk 8
-
-配置信息通过脚手架创建
-
-![image-20250219140522783](//store.s1r0ko.top/images/cy_s4_p1_ver1.png)
-
-![image-20250219140711508](//store.s1r0ko.top/images/cy_s4_p2_ver1.png)
-
-通过maven创建项目
-
-![image-20250219143034436](//store.s1r0ko.top/images/cy_s4_p3_ver1.png)
-
-修改maven文件导入依赖
-
-```xml
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
@@ -114,29 +104,43 @@ https://start.aliyun.com
 
 ```
 
-主函数配置![image-20250219143135970](//store.s1r0ko.top/images/cy_s4_p4_ver1.png)
+默认生成的主函数需要修改成下图的样子
 
-配置注解
+- 替换函数内容为：`SpringApplication.run(App.class, args);`
 
-## L1 springboot
+- 替换类注解为：`@SpringBootApplication`
 
+![主函数配置](//store.s1r0ko.top/images/cy_s4_p4_ver1.png)
 
+默认包扫描为启动类同层的下一级包
 
-默认包扫描为启动类的下一级包
+假设文件目录结构为：
 
+```bash title='文件目录结构'
+src
+└── main
+    ├── java
+    │   └── com
+    │       └── cykj
+    │           ├── App.java
+    │           ├── Test.java
+    │           └── controller
+    │               └── HelloController.java
+    └── resources
+        └── application.yml
+```
 
+那么默认的包扫描范围为：`com.cykj.**` （`**` 表示任意层级），这里的 `HelloController` 类会被扫描到，而 `Test.java` 类不会被扫描到。
+
+如果需要扫描其他层级的包，可以在 `@SpringBootApplication` 注解中添加 `scanBasePackages` 属性，指定需要扫描的包路径。
 
 请求静态文件默认在resource下的static目录
 
-(http://localhost:9900/1.jpg)
+比如这个地址就会直接访问static下的1.jpg `http://localhost:9900/1.jpg`
 
-比如这个地址就会直接访问static下的1.jpg
+![出现这种问题是没有配置数据库导致的](//store.s1r0ko.top/images/cy_s4_p5_ver1.png)
 
-
-
-![image-20250219144936603](//store.s1r0ko.top/images/cy_s4_p5_ver1.png)
-
-没有配置数据库导致的
+<!-- todo -->
 
 
 
