@@ -525,10 +525,10 @@ tag:
 #### 12. Which of the following is the shortest valid abbreviation for FE80:0000:0000:0100:0000:0000:0000:0123?（单选题）
 - 以下哪个是FE80:0000:0000:0100:0000:0000:0000:0123的最短有效缩写？
   - 选项：
-    -  FE80::100::123
-    -  FE8::1::123
-    -  FE80::100:0:0:0:123:4567
-    -  FE80:0:0:100::123（**正确答案**）{#blue-msg}
+    -  FE80:\:100::123
+    -  FE8:\:1::123
+    -  FE80:\:100:0:0:0:123:4567
+    -  FE80:0:0\:100::123（**正确答案**）{#blue-msg}
 
 #### 13. Which of the following is the shortest valid abbreviation for 2000:0300:0040:0005:6000:0700:0080:0009?（单选题）
 - 以下哪个是2000:0300:0040:0005:6000:0700:0080:0009的最短有效缩写？
@@ -549,7 +549,7 @@ tag:
 #### 15. Which of the following is the prefix for address 2000:0000:0000:0005:6000:0700:0080:0009, assuming a mask of /64?（单选题）
 - 假设掩码为/64，以下哪个是地址2000:0000:0000:0005:6000:0700:0080:0009的前缀？
   - 选项：
-    -  2000::5::/64
+    -  2000:\:5::/64
     -  2000::5:0:0:0:0/64
     -  2000:0:0:5::/64（**正确答案**）{#blue-msg}
     -  2000:0:0:5:0:0:0:0/64
@@ -562,8 +562,8 @@ tag:
     -  All other hosts attached to the same switch（连接到同一交换机的所有其他主机）
     -  Other hosts attached to the same switch and also in VLAN 1（连接到同一交换机且也在VLAN 1中的其他主机）（**正确答案**）{#blue-msg}
 
-#### 17. Why does the formula for the number of hosts per subnet (2 E +H – 2) require the subtraction of two hosts?（单选题）
-- 每个子网的主机数量公式（2 E +H – 2）为什么需要减去两个主机？
+#### 17. Why does the formula for the number of hosts per subnet (2E + H – 2) require the subtraction of two hosts?（单选题）
+- 每个子网的主机数量公式（2E + H – 2）为什么需要减去两个主机？
   - 选项：
     -  To reserve two addresses for redundant default gateways (routers)（为冗余默认网关（路由器）保留两个地址）
     -  To reserve the two addresses required for DHCP operation（为DHCP操作保留两个地址）
