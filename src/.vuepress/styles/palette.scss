@@ -3,6 +3,16 @@ $vp-font: 'AaCute';
 
 $vp-font-heading: 'AaCute';
 
+$blue-msg-color: (
+    light: rgb(71, 133, 124),
+    dark: rgb(189, 254, 255)
+) !default;
+
+$vp-c-bg: (
+  light: #ffffff,
+  dark: #1b1b1f,
+) !default;
+
 $logo-border-color: (
     light: rgba(32, 33, 39, 0.9),
     dark: rgba(255, 255, 255, 0.9)

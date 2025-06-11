@@ -236,6 +236,14 @@ export default hopeTheme({
       prefix: "fa-solid fa-"
     },
 
+    seo: {
+      autoDescription: true, 
+    },
+
+    sitemap: {
+      changefreq: "daily", 
+    }
+
     // install @vuepress/plugin-pwa and uncomment these if you want a PWA
     // pwa: {
     //   favicon: "/favicon.ico",
