@@ -7,7 +7,7 @@ const __dirname = new URL(".", import.meta.url).pathname;
 export default defineUserConfig({
   base: "/",
   lang: "zh-CN",
-  head: [["script", { src: "/extra/sidebar_scrollbar.js" }]],
+  head: [["link", { rel: "prefetch", href: "/extra/sidebar_scrollbar.js" }]],
   locales: {
     "/": {
       lang: "zh-CN",

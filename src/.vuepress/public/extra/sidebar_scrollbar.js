@@ -1,4 +1,4 @@
-const scrollBox = document.getElementById('sidebar');
+let scrollBox = document.getElementById('sidebar');
 let hideTimeout = null;
 
 function showScrollbar() {
