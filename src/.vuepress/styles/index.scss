@@ -48,15 +48,8 @@ body {
    font-synthesis: weight style small-caps;
 }
 
-html {
-    overflow-y: scroll;
-    scrollbar-width: unset;
-    scrollbar-color: unset;
-}
-
 // 侧边栏滚动条隐藏
 .vp-sidebar {
-
     overflow-y: scroll;
     scrollbar-width: unset;
     scrollbar-color: unset;
@@ -90,5 +83,4 @@ html {
     &.hide-scrollbar::-webkit-scrollbar-thumb {
         background-color: var(--vp-sidebar-scrollbar-hidden-background-color);
     }
-
 }
