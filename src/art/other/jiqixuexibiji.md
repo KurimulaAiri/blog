@@ -203,25 +203,25 @@ $$H(S) = -\left( \frac{9}{14} \log_2 \frac{9}{14} + \frac{5}{14} \log_2 \frac{5}
 - 天气=雨：5个样本（3是，2否）
 
 计算各子集的信息熵：
-$$H(晴) = -\left( \frac{2}{5} \log_2 \frac{2}{5} + \frac{3}{5} \log_2 \frac{3}{5} \right) \approx 0.971$$
-$$H(多云) = -\left( \frac{4}{4} \log_2 \frac{4}{4} + \frac{0}{4} \log_2 \frac{0}{4} \right) = 0$$
-$$H(雨) = -\left( \frac{3}{5} \log_2 \frac{3}{5} + \frac{2}{5} \log_2 \frac{2}{5} \right) \approx 0.971$$
+$$H(\text{晴}) = -\left( \frac{2}{5} \log_2 \frac{2}{5} + \frac{3}{5} \log_2 \frac{3}{5} \right) \approx 0.971$$
+$$H(\text{多云}) = -\left( \frac{4}{4} \log_2 \frac{4}{4} + \frac{0}{4} \log_2 \frac{0}{4} \right) = 0$$
+$$H(\text{雨}) = -\left( \frac{3}{5} \log_2 \frac{3}{5} + \frac{2}{5} \log_2 \frac{2}{5} \right) \approx 0.971$$
 
 计算条件熵：
-$$H(S|天气) = \frac{5}{14} \times 0.971 + \frac{4}{14} \times 0 + \frac{5}{14} \times 0.971 \approx 0.694$$
+$$H(S|\text{天气}) = \frac{5}{14} \times 0.971 + \frac{4}{14} \times 0 + \frac{5}{14} \times 0.971 \approx 0.694$$
 
 信息增益：
-$$IG(S, 天气) = 0.940 - 0.694 = 0.246$$
+$$IG(S, \text{天气}) = 0.940 - 0.694 = 0.246$$
 
 **2. 同理计算其他特征的信息增益**
-- $IG(S, 温度) \approx 0.029$
-- $IG(S, 湿度) \approx 0.151$
-- $IG(S, 风速) \approx 0.048$
+- $IG(S, \text{温度}) \approx 0.029$
+- $IG(S, \text{湿度}) \approx 0.151$
+- $IG(S, \text{风速}) \approx 0.048$
 
 
 #### **步骤3：选择最优划分属性**
 比较各特征的信息增益：
-$$0.246 \ (天气) > 0.151 \ (湿度) > 0.048 \ (风速) > 0.029 \ (温度)$$
+$$0.246 \ (\text{天气}) > 0.151 \ (\text{湿度}) > 0.048 \ (\text{风速}) > 0.029 \ (\text{温度})$$
 
 **选择“天气”作为根节点的划分属性**
 
