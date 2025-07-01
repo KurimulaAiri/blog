@@ -150,25 +150,57 @@ mybatis的相关配置
 
 ## L2 springboot-starter
 
-<!-- TODO 截止这里 -->
-
 文件上传的大小有限制，现阶段问题是如果上传文件太大就无法上传
 
 在配置里可以修改上传大小限制
 
---------------------------------------------------------------------------
+```yml title='application.yml'
+spring:
+  servlet:
+    multipart:
+      max-file-size: 10MB
+      max-request-size: 10MB
+```
 
-相对ssm springboot有什么优点 ==> 启动器 ===>springboot如何装配 === 启动器原理 ==> 了解过哪些启动器
+### 为什么使用启动器（springboot-starter）
 
-===》会自动导依赖，进行一些默认配置
+相对ssm springboot有什么优点 ==> 启动器 ==> springboot如何装配 ==> 启动器原理 ==> 了解过哪些启动器 ==> 会自动导依赖，进行一些默认配置
 
-案例，写一个验证码的启动器来了解启动器的配置
+案例：写一个验证码的启动器来了解启动器的配置
 
 ### 验证码启动器
 
-1、创建一个独立的工程
+- 具体步骤：
 
-2、导入相关依赖
+  1.创建一个独立的工程
+
+  - 使用idea脚手架创建quick-start项目，项目的命名规则应为：xxx-spring-boot-starter
+
+  通过修改需要将文件结构调整为：
+
+  ```bash title='调整后的文件结构'
+  src
+  └── main
+      ├── java
+      │   └── com
+      │       └── cykj
+      │           ├── config
+      │           │   └── CodeProperties.java
+      │           ├── entity
+      │           │   └── Code.java
+      │           ├── filter
+      │           │   └── CodeFilter.java
+      │           └── utils
+      │               └── CodeUtils.java
+      │           
+      │           
+      └── resources
+          ├── additional-spring-configuration-metadata.json
+          └── spring.factories
+
+  ```
+
+  2.导入相关依赖
 
 ```xml
 <properties>

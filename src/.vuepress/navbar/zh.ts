@@ -17,6 +17,7 @@ export const zhNavbar = navbar([
         prefix: "learning/coding",
         children: [
           { text: "RocketMQ安装与配置", icon: "pen-to-square", link: "cy/stage_4/RocketMQ" },
+          { text: "四阶段笔记", icon: "pen-to-square", link: "cy/stage_4/Lessen" },
           // { text: "苹果2", icon: "pen-to-square", link: "2" },
         ],
       },
