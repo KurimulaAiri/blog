@@ -1,6 +1,6 @@
 ---
 home: true
-layout: BlogHome
+layout: Blog
 icon: house
 title: KurimulaAiri的小窝
 # heroImage: https://theme-hope-assets.vuejs.press/logo.svg
