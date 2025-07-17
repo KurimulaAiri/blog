@@ -14,7 +14,6 @@
     "@vuepress/bundler-vite": "2.0.0-rc.24",
     "@vuepress/plugin-docsearch": "2.0.0-rc.112",
     "katex": "^0.16.22",
-    "markmap-common": "^0.18.9",
     "markmap-lib": "^0.18.12",
     "markmap-toolbar": "^0.18.10",
     "markmap-view": "^0.18.12",
