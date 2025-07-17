@@ -191,7 +191,7 @@ CSMA （Carrier Sense Multiple Access）协议，即**载波监听多路访问�
 
 这里的 $p$ 指的是在信道空闲时，有多大的概率发送数据
 
-![p-坚持 CSMA 协议流程图](https://store.s1r0ko.top/svg/m_cn_17_3_ver_1.svg)
+![p-坚持 CSMA 协议流程图](https://store.s1r0ko.top/svg/m_cn_17_3_ver_2.svg)
 
 - **优点**
 
@@ -205,18 +205,18 @@ CSMA （Carrier Sense Multiple Access）协议，即**载波监听多路访问�
 ---
 markmap:
     colorFreezeLevel: 4
-    maxWidth: 800
+    maxWidth: 400
 ---
 
 # CSMA/CD 协议
 
 ## 协议要点
 
-### 先听后发，边听边发，冲突停发，随机重发
+### 先听后发，边听边发，**冲突停发**，**随机重发**
 
 ### 如何随机重发
 
-- [截断二进制指数退避算法](/art/learning/master/major/ComputerNetworks/MediaAccessControl.html#%E6%88%AA%E6%96%AD%E4%BA%8C%E8%BF%9B%E5%88%B6)
+- [截断二进制指数退避算法](/art/learning/master/major/ComputerNetworks/MediaAccessControl.html#截断二进制指数退避算法)
 
 ### 特别注意
 
@@ -242,9 +242,16 @@ markmap:
 
 ```
 
+![CSMA/CD 协议发送方流程图](https://store.s1r0ko.top/svg/m_cn_17_4_ver_1.svg)
+
+这里的等待时间由[截断二进制指数退避算法](/art/learning/master/major/ComputerNetworks/MediaAccessControl.html#截断二进制指数退避算法)计算得出
+
+
 ## 补充内容
 
-### 截断二进制
+一些补充内容
+
+### 截断二进制指数退避算法
 
 $\text{随机等待一段时间} = r \text{倍争用期，其中} r \text{是随机数}$
 
