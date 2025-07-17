@@ -197,7 +197,9 @@ CSMA （Carrier Sense Multiple Access）协议，即**载波监听多路访问�
 
 属于 1-坚持 CSMA 、非坚持 CSMA 的折中方案，降低冲突概率的同时提升信道利用率
 
-### :scream: **CSMA/CD 协议**{#red-msg}
+### **CSMA/CD 协议**{#red-msg} [:scream: :thumbsup:](/art/learning/master/major/ComputerNetworks/MediaAccessControl.html#符号意义) 
+
+CSMA/CD （Carrier Sense Multiple Access with **Collision Detection**{#blue-msg}）协议，即**载波监听多路访问协议** / **冲突检测**
 
 常用于早期有线以太网[（总线型）](/art/learning/master/major/ComputerNetworks/ClassificationOfComputerNetworks.html#按拓扑结构分类)
 
@@ -205,7 +207,7 @@ CSMA （Carrier Sense Multiple Access）协议，即**载波监听多路访问�
 ---
 markmap:
     colorFreezeLevel: 4
-    maxWidth: 400
+    maxWidth: 450
 ---
 
 # CSMA/CD 协议
@@ -224,11 +226,11 @@ markmap:
 
 - 第 16 次冲突，直接躺平，放弃传帧，报告上级（网络层）
 
-## $\text{争用期} = 2 \times \text{最大单向传播时延（考虑距离最远的两个节点）}$
+## $\text{争用期} = 2 \times \text{最大单向传播时延} \\ \text{（考虑距离最远的两个节点）}$
 
 ### 若争用期内未发生冲突，就不可能再冲突
 
-### CSMA/CD 没有 ACK 机制，若发送过程中未检测到冲突，就认为帧发送成功
+### CSMA/CD 没有 ACK 机制，若**发送过程中未检测到冲突，就认为帧发送成功**
 
 ## $\text{最短帧长} = 2 \times \text{最大单向传播时延} \times \text{信道带宽}$
 
@@ -238,7 +240,7 @@ markmap:
 
 ## 以太网规定
 
-### 最短帧长：64B；最长帧长：1518B
+### 最短帧长：64B；最长帧长：1518B （B：字节）
 
 ```
 
@@ -246,10 +248,137 @@ markmap:
 
 这里的等待时间由[截断二进制指数退避算法](/art/learning/master/major/ComputerNetworks/MediaAccessControl.html#截断二进制指数退避算法)计算得出
 
+可以见得由于冲突次数越大，当前的网络环境可能就越拥堵，因此需要等待的时间的可能取值范围就越大，以尽量避免过于拥堵的网络环境
+
+![CSMA/CD 协议接收方流程图](https://store.s1r0ko.top/svg/m_cn_17_5_ver_1.svg)
+
+### **CSMA/CA 协议**{#red-msg} [:scream:](/art/learning/master/major/ComputerNetworks/MediaAccessControl.html#符号意义)
+
+CSMA/CA （Carrier Sense Multiple Access with **Collision Avoidance**{#blue-msg}）协议，即**载波监听多路访问协议** / **冲突避免**
+
+该协议适用于 IEEE 802.11 无线局域网 （WIFI）
+
+```markmap
+---
+markmap:
+    colorFreezeLevel: 4
+    maxWidth: 450
+---
+
+# CSMA/CA 协议
+
+## 协议要点
+
+### 发送方：先听后发，忙则退避
+
+- 若信道*空闲*，间隔 DIFS ，再发送帧（**一口气发送完，发送过程中不用检测冲突**）
+
+- 若信道不空闲，则进行**“随机退避”**
+
+### **随机退避**原理
+
+- 1.用[二进制指数退避算法](/art/learning/master/major/ComputerNetworks/MediaAccessControl.html#截断二进制指数退避算法)确定一段随机退避时间（倒计时）
+
+- 2.发送方会保持监听信道，**只有信道空闲时才“扣除倒计时”**，倒计时接收后立即发送帧（此时信道“听起来”一定空闲）
+
+### 接收方：停止等待协议
+
+- 每收到一个正确数据帧都返回 ACK ；若发送方超时未收到 ACK ，则进行“随机退避”
+
+## 信道预约机制（可选功能）
+
+### 1.**发送方**广播 **RTS 控制帧（先听后发，忙则退避）**
+
+### 2.[AP](/art/learning/master/major/ComputerNetworks/MediaAccessControl.html#ap) 广播 **CTS 控制帧**
+
+### 以上两种须在 RTS 和 CTS 中指明预约时长
+
+### 3.其他*无关节点*收到 CTS 后自觉“*禁言*”一段时间（即：虚拟载波监听机制）；发送方收到 CTS 后，就可以发送数据帧
+
+### 4.[AP](/art/learning/master/major/ComputerNetworks/MediaAccessControl.html#ap) 收到数据帧后，进行 CRC 校验，若无差错就返回 ACK 帧
+ 
+## 帧间间隔 IFS
+
+### **DIFS**，最长的 IFS
+
+- 每次“帧”事务开始之前都需要等待时间
+
+### SIFS，最短的 IFS
+
+- 收到最后一个真后需要预留一段处理时间
+
+### ~~PIFS，中等长度的 IFS~~
+
+- ~~考研不需要关注~~
+
+```
+
+无线信号的使用场景下， CSMA/CD 协议很难实现不同设备间的信号随着距离增加而减弱，对于监听而言是不利的，硬件上很难实现；同时存在**隐藏节点**的问题，设备之间不一定检测到彼此的信号
+
+DIFS > PIFS > SIFS
+
+## 轮询访问
+
+### 令牌传递协议
+
+IBM 公司于 1984 年开发出一种局域网技术：令牌环网技术
+
+该技术核心特点是：环形拓扑结构，各节点“轮询访问”信道，不会发生信道冲突
+
+实现该技术的核心就是：令牌传递协议
+
+```markmap
+---
+markmap:
+    colorFreezeLevel: 4
+    maxWidth: 450
+---
+
+# 令牌传递协议
+
+## 协议要点（数据帧和令牌帧在发送数据时可以互相转换）
+
+### 令牌帧
+
+- 需要指明当前**获得令牌的节点编号**
+
+- 只有获得令牌（Token）的节点才能往信道上发送数据帧
+
+- 如果获得令牌的节点**没有数据要发送**，就**将令牌传递给下一个节点**
+
+### 数据帧
+
+- 需要指明数据帧的**源地址/目的地址、是否已被接收、获得令牌的节点编号**
+
+- 数据帧从源节点出发，“传递一圈”后回到源节点
+
+- 数据帧“传递一圈”的过程中，会被**目的节点**复制一份数据，并将数据帧标记为“**已接收**”
+
+- 数据帧回到源节点后，如果发现**异常**情况，就尝试**重发**；若**无异常**，就**将令牌传递给下一节点**
+
+## 其他补充
+
+### 无论是令牌帧还是数据帧，都只能沿单向传递
+
+### 获得令牌的节点，每次只能发送一帧，发完必须释放令牌
+
+### 需要专门的网络设备（MAU）实现**集中控制**
+
+### 令牌传递协议很**适用于负载高**的网络（不会发生冲突，效率高）
+
+```
+
+在一个局域网内，只有一台设备持有令牌，只有持有令牌的设备才能使用信道进行通信
+
+每次发送数据都会从发送方开始依次轮询接下来信道上的每个节点，各个节点会对数据和接收方mac地址进行校验，接收后会对帧内部分数据进行修改然后继续轮询，直到回到最初的发送方
 
 ## 补充内容
 
 一些补充内容
+
+### 符号意义
+
+本章内容标 :scream: 代表难点 :thumbsup: 代表重点
 
 ### 截断二进制指数退避算法
 
@@ -258,3 +387,17 @@ $\text{随机等待一段时间} = r \text{倍争用期，其中} r \text{是随
 - 如果 $k \le 10$，在 $[0, (2^k - 1)]$ 区间随机取一个整数 $r$
 
 - 如果 $k > 10$，在 $[0, (2^{10} - 1)]$ 区间随机取一个整数 $r$
+
+### 争用期
+
+$\text{争用期} = 2 \times \text{最大单向传播时延（考虑距离最远的两个节点）}$
+
+如果在争用期内没有检测到冲突，则本次帧发送就不再可能发送冲突
+
+### AP 
+
+AP （Access Point），即**接入点**，平时的提供WIFI信号源，WIFI的那几根天线的接收端，所有的移动站点都需要固定站点 AP 来进行通信
+
+家用路由器 = 路由器 + 交换机 + AP
+
+
