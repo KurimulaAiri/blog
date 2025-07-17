@@ -1,5 +1,5 @@
 ---
-title: 流量控制、可靠传输与滑动窗口机制
+title: 流量控制、可靠传输
 date: 2025-07-14
 icon: 'earth-americas'
 order: 16
