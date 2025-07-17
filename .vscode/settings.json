@@ -9,6 +9,7 @@
         "decr",
         "DIFS",
         "extranet",
+        "FDDI",
         "fontawesome",
         "Gbps",
         "Guguguy",
@@ -60,6 +61,7 @@
         "unsubnetted",
         "vidstack",
         "Waline",
+        "WLAN",
         "zadd",
         "zset"
     ]
