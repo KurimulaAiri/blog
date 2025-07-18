@@ -27,7 +27,7 @@ category:
 
 ## 双绞线
 
-![双绞线](//store.s1r0ko.top/images/1.png)
+![双绞线](//store.s1r0ko.top/images/m_cn_11_1_ver_1.png)
 
 ````markmap
 ---
@@ -62,7 +62,7 @@ markmap:
 
 ## 同轴电缆
 
-![同轴电缆](//store.s1r0ko.top/images/2.png)
+![同轴电缆](//store.s1r0ko.top/images/m_cn_11_2_ver_1.png)
 
 ````markmap
 ---
@@ -92,7 +92,7 @@ markmap:
 
 ## 光纤
 
-![光纤](//store.s1r0ko.top/images/3.png)
+![光纤](//store.s1r0ko.top/images/m_cn_11_3_ver_1.png)
 
 ````markmap
 ---
