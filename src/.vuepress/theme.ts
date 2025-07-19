@@ -223,7 +223,7 @@ export default hopeTheme({
 
     docsearch: {
       appId: "ULF54MS9H5",
-      apiKey: "dd5971a09c604a9a48c9f9b00b1524a1",
+      apiKey: "b1179e69fff348d7b0ff1928975af8fd",
       indexName: "md-s1r0ko",
       // container: "### REPLACE ME WITH A CONTAINER (e.g. div) ###",
     },
