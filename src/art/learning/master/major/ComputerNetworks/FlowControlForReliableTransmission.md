@@ -346,7 +346,7 @@ NAK 重传可以节约时间，不需要等待发送方计时器超时即可完�
 
 - 信道单向传播时延为 7s
 
-![S-W传输信道图示](https://store.s1r0ko.top/svg/m_cn_16_1_ver_1.svg)
+![S-W传输信道图示](https://store.s1r0ko.top/svg/m/cn/16/1_ver_1.svg)
 
 根据图示结合信道利用率公式 
 
@@ -402,7 +402,7 @@ $$
 
 - 信道单向传播时延为 7s
 
-![GBN传输信道图示](https://store.s1r0ko.top/svg/m_cn_16_2_ver_2.svg)
+![GBN传输信道图示](https://store.s1r0ko.top/svg/m/cn/16/2_ver_2.svg)
 
 同样依据上面的公式可以计算：
 

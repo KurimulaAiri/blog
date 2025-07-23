@@ -120,7 +120,7 @@ markmap:
 
 示意图：
 
-![RTT示意图](//store.s1r0ko.top/svg/m_cn_5_1_ver_1.svg)
+![RTT示意图](//store.s1r0ko.top/svg/m/cn/5/1_ver_1.svg)
 
 如图：$RTT = t2 + t3 + t4 + t5$
 

@@ -47,7 +47,7 @@ category:
 
 8. $K \rightarrow J$
 
-![交换机自学习示例图](https://store.s1r0ko.top/svg/m_cn_19_1_ver_1.svg)
+![交换机自学习示例图](https://store.s1r0ko.top/svg/m/cn/19/1_ver_1.svg)
 
 开始时，两台交换机各自维护的交换表均为空，如下：
 
@@ -57,11 +57,11 @@ category:
 
 1. 收到 $A \rightarrow C$ 帧，学习到 $A$ 的 MAC 地址，将 $A$ 的 MAC 地址和端口号 $1$ 记录到交换表中，此时由于交换表中没有 $C$ 的记录，所以将该帧向全部连接的子节点发送出去，所有节点除 $C$ 外接收到该帧都会丢弃，并且由于其连接到交换机 2 所以交换机也会重复这一步骤，由于交换机 2 的交换表没有记录过该帧发送方的 MAC 地址并且该帧从端口 1 进入，所以交换机 2 会将该帧的发送方 MAC 地址，也就是 $A$ 的 MAC 地址映射记录到端口 1 上，此时双方的交换表应该是这样的
 
-![交换表](https://store.s1r0ko.top/svg/m_cn_19_2_ver_1.svg)
+![交换表](https://store.s1r0ko.top/svg/m/cn/19/2_ver_1.svg)
 
 2. 收到 $B \rightarrow C$ 的处理和步骤 1 类似，此时交换机 1 做的操作就是记录 $B$ MAC 地址然后广播，交换机 2 的操作也是记录 $B$ MAC 地址然后广播，所以双方的交换表应该是这样的：
 
-![交换表](https://store.s1r0ko.top/svg/m_cn_19_3_ver_1.svg)
+![交换表](https://store.s1r0ko.top/svg/m/cn/19/3_ver_1.svg)
 
 
 
