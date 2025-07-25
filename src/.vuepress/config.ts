@@ -14,11 +14,11 @@ export default defineUserConfig({
       title: "博客与资料库",
       description: "KurimulaAiri",
     },
-    // "/en/": {
-    //   lang: "en-US",
-    //   title: "Blog Demo",
-    //   description: "A blog demo for vuepress-theme-hope",
-    // },
+    "/en/": {
+      lang: "en-US",
+      title: "Blog Demo",
+      description: "A blog demo for vuepress-theme-hope",
+    },
   },
 
   theme,
