@@ -45,7 +45,7 @@
 }
 
 body {
-   font-synthesis: weight style small-caps;
+    font-synthesis: weight style small-caps;
 }
 
 // 侧边栏滚动条隐藏
@@ -53,6 +53,7 @@ body {
     overflow-y: scroll;
     scrollbar-width: unset;
     scrollbar-color: unset;
+    transition: all 0.5s ease;
 
     &::-webkit-scrollbar {
         width: 3px;
