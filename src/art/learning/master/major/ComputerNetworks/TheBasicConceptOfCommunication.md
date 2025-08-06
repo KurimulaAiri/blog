@@ -76,7 +76,7 @@ $$
 
 需要了解的知识：
 
-- 回顾：信道 [带宽（Hz）](/art/learning/master/major/ComputerNetworks/PerformanceMetricsForComputerNetworks.html#带宽) 的概念
+- 回顾：信道 [带宽（Hz）](./PerformanceMetricsForComputerNetworks.html#带宽) 的概念
 
 - 噪声的概念 —— 噪声会影响信道数据传输的效果
 

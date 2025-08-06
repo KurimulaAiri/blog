@@ -71,7 +71,7 @@ markmap:
 
 - 集线器、中继器 不能“无限串联” —— 如：10Base5 的 5-4-3 原则[^1]
 
-- [集线器连接的网络，物理上是星形拓扑，逻辑上是总线形拓扑](/art/learning/master/major/ComputerNetworks/ClassificationOfComputerNetworks.html#按拓扑结构分类)
+- [集线器连接的网络，物理上是星形拓扑，逻辑上是总线形拓扑](./ClassificationOfComputerNetworks.html#按拓扑结构分类)
 
 - 集线器连接的各网段“共享带宽”，例如：带宽为 10Mbps的集线器，连接 8 台主机，每台主机的平均带宽只有 1.25Mbps
 

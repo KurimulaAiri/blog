@@ -257,7 +257,7 @@ IEEE 802 将数据链路层分为三个层次
 
 - 协议的两个字节指明**网络层**的协议，在 802.3 标准中，这个位置两个字节指明数据部分的长度，指明协议的功能交由 LLC 子层去完成
 
-- 由于在以太网传输中可能会使用 [CSMA/CD 协议](/art/learning/master/major/ComputerNetworks/MediaAccessControl.html#csma-cd-协议)进行数据传输，因此需要对数据部分的长度进行限制
+- 由于在以太网传输中可能会使用 [CSMA/CD 协议](./MediaAccessControl.html#csma-cd-协议)进行数据传输，因此需要对数据部分的长度进行限制
 
 - 数据如果太长无法使用一帧完成传输，就需要对数据进行分片；同样的，如果数据太短，就需要对空余部分使用 0 进行填充
 
@@ -269,7 +269,7 @@ IEEE 802 将数据链路层分为三个层次
 
 - 前同步码的主要作用是确认一个电信号节奏与接收方进行协调，内容为：10101010……
 
-- 帧结尾定界采用“违规编码法”（即使用[曼彻斯特编码](/art/learning/master/major/ComputerNetworks/CodingAndModulation.html#常用编码方法)的违规编码），且一个帧传完会留一段间隙
+- 帧结尾定界采用“违规编码法”（即使用[曼彻斯特编码](./CodingAndModulation.html#常用编码方法)的违规编码），且一个帧传完会留一段间隙
 
 记忆口诀： **6 6 2 N 4 ， 收发协数验， N 是四六一千五**
 
@@ -376,7 +376,7 @@ S1 包含接口 8 是因为有部分具有此 VID 的节点位于连接接口 8 
 
 如果一个帧需要跨域交换机传输，那么该帧需要遵从 802.1Q 帧的格式，在帧中指明 VID 
 
-在跨越交换机时，发送方交换机会在[标准以太网帧](/art/learning/master/major/ComputerNetworks/LocalAreaNetwork.html#v2-标准的以太网-mac-帧)的源地址和协议类型的两个位置中间插入一个 4 字节的 VLAN 标签，指明该帧所属的 VLAN 并且重新生成 CRC 码，因为插入了 VLAN 标签该帧的内容已经改变，先前的 CRC 码已经失效；接收方交换机会在收到该帧并判断处理完成后去除这个部分，然后转发给对应的主机或主机所属的交换机
+在跨越交换机时，发送方交换机会在[标准以太网帧](./LocalAreaNetwork.html#v2-标准的以太网-mac-帧)的源地址和协议类型的两个位置中间插入一个 4 字节的 VLAN 标签，指明该帧所属的 VLAN 并且重新生成 CRC 码，因为插入了 VLAN 标签该帧的内容已经改变，先前的 CRC 码已经失效；接收方交换机会在收到该帧并判断处理完成后去除这个部分，然后转发给对应的主机或主机所属的交换机
 
 
 ![802.1Q 帧结构](https://store.s1r0ko.top/images/m/cn/18/2_ver_1.png)
@@ -423,7 +423,7 @@ S1 包含接口 8 是因为有部分具有此 VID 的节点位于连接接口 8 
 
 ### 802.11 帧的分类
 
-802.11 采用 [CSMA/CA 协议](/art/learning/master/major/ComputerNetworks/MediaAccessControl.html#csma-ca-协议)，帧的类型基于该协议规定需要的帧，加上一些额外的帧
+802.11 采用 [CSMA/CA 协议](./MediaAccessControl.html#csma-ca-协议)，帧的类型基于该协议规定需要的帧，加上一些额外的帧
 
 - 数据帧
 
@@ -509,12 +509,12 @@ AP 通常具有将 802.11 帧转换为以太网帧的能力
 
 | 字节 | 2 | 2 | 6 | 4 |
 | :---: | :---: | :---: | :---: | :---: | 
-| 含义 | 帧控制 | [持续期](/art/learning/master/major/ComputerNetworks/LocalAreaNetwork.html#footnote9) | 发送地址 | FCS |
+| 含义 | 帧控制 | [持续期](./LocalAreaNetwork.html#footnote9) | 发送地址 | FCS |
 
 - ACK 帧
 
 | 字节 | 2 | 2 | 6 | 4 |
 | :---: | :---: | :---: | :---: | :---: | 
-| 含义 | 帧控制 | [持续期](/art/learning/master/major/ComputerNetworks/LocalAreaNetwork.html#footnote9) | 发送地址 | FCS |
+| 含义 | 帧控制 | [持续期](./LocalAreaNetwork.html#footnote9) | 发送地址 | FCS |
 
 :::

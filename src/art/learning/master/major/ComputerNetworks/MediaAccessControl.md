@@ -197,11 +197,11 @@ CSMA （Carrier Sense Multiple Access）协议，即**载波监听多路访问�
 
 属于 1-坚持 CSMA 、非坚持 CSMA 的折中方案，降低冲突概率的同时提升信道利用率
 
-### **CSMA/CD 协议**{#red-msg} [:scream: :thumbsup:](/art/learning/master/major/ComputerNetworks/MediaAccessControl.html#符号意义) 
+### **CSMA/CD 协议**{#red-msg} [:scream: :thumbsup:](./MediaAccessControl.html#符号意义) 
 
 CSMA/CD （Carrier Sense Multiple Access with **Collision Detection**{#blue-msg}）协议，即**载波监听多路访问协议** / **冲突检测**
 
-常用于早期有线以太网[（总线型）](/art/learning/master/major/ComputerNetworks/ClassificationOfComputerNetworks.html#按拓扑结构分类)
+常用于早期有线以太网[（总线型）](./ClassificationOfComputerNetworks.html#按拓扑结构分类)
 
 ```markmap
 ---
@@ -218,7 +218,7 @@ markmap:
 
 ### 如何随机重发
 
-- [截断二进制指数退避算法](/art/learning/master/major/ComputerNetworks/MediaAccessControl.html#截断二进制指数退避算法)
+- [截断二进制指数退避算法](./MediaAccessControl.html#截断二进制指数退避算法)
 
 ### 特别注意
 
@@ -246,13 +246,13 @@ markmap:
 
 ![CSMA/CD 协议发送方流程图](https://store.s1r0ko.top/svg/m/cn/17/4_ver_1.svg)
 
-这里的等待时间由[截断二进制指数退避算法](/art/learning/master/major/ComputerNetworks/MediaAccessControl.html#截断二进制指数退避算法)计算得出
+这里的等待时间由[截断二进制指数退避算法](./MediaAccessControl.html#截断二进制指数退避算法)计算得出
 
 可以见得由于冲突次数越大，当前的网络环境可能就越拥堵，因此需要等待的时间的可能取值范围就越大，以尽量避免过于拥堵的网络环境
 
 ![CSMA/CD 协议接收方流程图](https://store.s1r0ko.top/svg/m/cn/17/5_ver_1.svg)
 
-### **CSMA/CA 协议**{#red-msg} [:scream:](/art/learning/master/major/ComputerNetworks/MediaAccessControl.html#符号意义)
+### **CSMA/CA 协议**{#red-msg} [:scream:](./MediaAccessControl.html#符号意义)
 
 CSMA/CA （Carrier Sense Multiple Access with **Collision Avoidance**{#blue-msg}）协议，即**载波监听多路访问协议** / **冲突避免**
 
@@ -277,7 +277,7 @@ markmap:
 
 ### **随机退避**原理
 
-- 1.用[二进制指数退避算法](/art/learning/master/major/ComputerNetworks/MediaAccessControl.html#截断二进制指数退避算法)确定一段随机退避时间（倒计时）
+- 1.用[二进制指数退避算法](./MediaAccessControl.html#截断二进制指数退避算法)确定一段随机退避时间（倒计时）
 
 - 2.发送方会保持监听信道，**只有信道空闲时才“扣除倒计时”**，倒计时接收后立即发送帧（此时信道“听起来”一定空闲）
 
@@ -289,13 +289,13 @@ markmap:
 
 ### 1.**发送方**广播 **RTS 控制帧（先听后发，忙则退避）**
 
-### 2.[AP](/art/learning/master/major/ComputerNetworks/MediaAccessControl.html#ap) 广播 **CTS 控制帧**
+### 2.[AP](./MediaAccessControl.html#ap) 广播 **CTS 控制帧**
 
 ### 以上两种须在 RTS 和 CTS 中指明预约时长
 
 ### 3.其他*无关节点*收到 CTS 后自觉“*禁言*”一段时间（即：虚拟载波监听机制）；发送方收到 CTS 后，就可以发送数据帧
 
-### 4.[AP](/art/learning/master/major/ComputerNetworks/MediaAccessControl.html#ap) 收到数据帧后，进行 CRC 校验，若无差错就返回 ACK 帧
+### 4.[AP](./MediaAccessControl.html#ap) 收到数据帧后，进行 CRC 校验，若无差错就返回 ACK 帧
  
 ## 帧间间隔 IFS
 

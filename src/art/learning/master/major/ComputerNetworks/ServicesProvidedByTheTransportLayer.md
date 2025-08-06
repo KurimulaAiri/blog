@@ -351,6 +351,16 @@ TCP 支持报文拆分和重装，所以可以进行长报文的传输
 
 - 握手 ③ 可以携带数据，也可以不携带数据，如果不携带数据，就可以不消耗序号
 
+![TCP 建立连接状态变化](//store.s1r0ko.top/svg/m/cn/24/6_ver_1.svg)
+
+思考收到某个报文时，双方的状态变化
+
+- 考试要点：
+
+从发出握手 ① 到客户端进程可以发送数据，至少要多久—— 1 [RTT](./PerformanceMetricsForComputerNetworks.html#往返时间rtt)
+
+从发出握手 ① 到服务器进程可以发送数据，至少要多久—— 1.5 [RTT](./PerformanceMetricsForComputerNetworks.html#往返时间rtt)
+
 :::
 
 
