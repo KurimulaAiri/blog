@@ -361,6 +361,8 @@ TCP 支持报文拆分和重装，所以可以进行长报文的传输
 
 从发出握手 ① 到服务器进程可以发送数据，至少要多久—— 1.5 [RTT](./PerformanceMetricsForComputerNetworks.html#往返时间rtt)
 
+题目一般会给出 RTT 的具体值
+
 :::
 
 
