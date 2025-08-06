@@ -16,14 +16,15 @@ heroFullScreen: true
 
 bgImage: //store.s1r0ko.top/images/bg1.png
 bgImageStyle: 
-  - filter: blur(5px) 
-  - webkit-filter: blur(5px) 
+  # - filter: blur(5px) 
+  # - webkit-filter: blur(5px) 
+  - background-attachment: fixed
 
 bgImageDark: //store.s1r0ko.top/images/bg2.png
 bgImageDarkStyle:
   - filter: blur(5px)
   - webkit-filter: blur(5px)
-  - opacity: '0.7'
+  - background-attachment: fixed
 
 tagline: # '<p style="color: #000; -webkit-text-stroke: 1px solid #888; bold: true">一条咸鱼</p>'
 projects:

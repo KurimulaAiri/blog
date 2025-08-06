@@ -1,4 +1,5 @@
 import { hopeTheme } from "vuepress-theme-hope";
+import { setupTransparentNavbar } from "vuepress-theme-hope/presets/transparentNavbar.js";
 
 import { enNavbar, zhNavbar } from "./navbar/index.js";
 import { enSidebar, zhSidebar } from "./sidebar/index.js";
@@ -240,11 +241,11 @@ export default hopeTheme({
     },
 
     seo: {
-      autoDescription: true, 
+      autoDescription: true,
     },
 
     sitemap: {
-      changefreq: "daily", 
+      changefreq: "daily",
     }
 
     // install @vuepress/plugin-pwa and uncomment these if you want a PWA
@@ -308,5 +309,5 @@ export default hopeTheme({
   {
     // 开启组件自定义
     custom: true,
-  }
+  },
 );
