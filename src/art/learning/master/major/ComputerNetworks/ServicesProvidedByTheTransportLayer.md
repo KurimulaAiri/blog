@@ -616,6 +616,11 @@ $$
 
 :::
 
+假设
+
+<TestComponent/>
+
 <script setup>
 import MyTableLine from '/.vuepress/components/MyTableLine.vue'
+import TestComponent from '/.vuepress/components/TestComponent.vue'
 </script>
