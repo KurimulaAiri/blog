@@ -5,6 +5,7 @@
         "classful",
         "collisionless",
         "CSMA",
+        "cwnd",
         "cykj",
         "decr",
         "DIFS",
