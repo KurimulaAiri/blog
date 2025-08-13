@@ -1,6 +1,6 @@
 ---
 title: 操作系统
-icon: 'earth-americas'
+icon: 'gears'
 index: false
 category: 
     - '408'
