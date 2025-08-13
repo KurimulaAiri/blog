@@ -6,6 +6,5 @@ import { setupTransparentNavbar } from "vuepress-theme-hope/presets/transparentN
 export default defineClientConfig({
   setup: () => {
     setupTransparentNavbar({ type: "homepage" });
-
   },
 });

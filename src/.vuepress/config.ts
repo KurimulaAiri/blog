@@ -31,7 +31,6 @@ export default defineUserConfig({
     //   "./components/HomePage.vue",
     // ),
   },
-
   // Enable it with pwa
   // shouldPrefetch: false,
 });
