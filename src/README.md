@@ -73,6 +73,11 @@ projects:
     desc: 王道考研计算机网络学习笔记
     link: /art/learning/master/major/ComputerNetworks/
 
+  - icon: gears
+    name: 操作系统
+    desc: 王道考研操作系统学习笔记
+    link: /art/learning/master/major/OperatingSystem/
+
   - icon: calculator
     name: 高等数学
     desc: 张宇考研数学学习笔记

@@ -74,14 +74,14 @@ body {
     }
 
     &.hide-scrollbar::-webkit-scrollbar-track-piece {
-        background-color: var(--vp-sidebar-scrollbar-hidden-background-color);
+        background-color: unset;
     }
 
     &.hide-scrollbar::-webkit-scrollbar-track {
-        background-color: var(--vp-sidebar-scrollbar-hidden-background-color);
+        background-color: unset;
     }
 
     &.hide-scrollbar::-webkit-scrollbar-thumb {
-        background-color: var(--vp-sidebar-scrollbar-hidden-background-color);
+        background-color: unset;
     }
 }
