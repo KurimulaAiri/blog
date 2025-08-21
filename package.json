@@ -13,6 +13,7 @@
   "devDependencies": {
     "@vuepress/bundler-vite": "2.0.0-rc.24",
     "@vuepress/plugin-docsearch": "2.0.0-rc.112",
+    "@vueuse/core": "^13.7.0",
     "echarts": "^5.6.0",
     "katex": "^0.16.22",
     "markmap-lib": "^0.18.12",
