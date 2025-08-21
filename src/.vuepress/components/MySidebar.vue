@@ -24,7 +24,7 @@
 
 <script setup>
 import { watchImmediate } from "@vueuse/core";
-import { onMounted, shallowRef, useSlots } from "vue";
+import { onMounted, shallowRef, useSlots, nextTick } from "vue";
 import { useRoute } from "vuepress/client";
 import SidebarLinks from "@theme-hope/components/sidebar/SidebarLinks";
 import { useSidebarItems } from "@theme-hope/composables/sidebar/useSidebarItems";
@@ -38,11 +38,44 @@ const sidebarItems = useSidebarItems();
 const slots = useSlots();
 // 侧边栏DOM引用
 const sidebar = shallowRef();
+// 隐藏滚动条的定时器
+let hideTimeout = null;
+
+// 显示滚动条并设置自动隐藏
+function showScrollbar() {
+  if (!sidebar.value) return;
+  
+  // 移除隐藏类，显示滚动条
+  sidebar.value.classList.remove('hide-scrollbar');
+  
+  // 清除之前的定时器
+  if (hideTimeout) clearTimeout(hideTimeout);
+  
+  // 设置新的定时器，1秒后隐藏滚动条
+  hideTimeout = setTimeout(() => {
+    if (sidebar.value) {
+      sidebar.value.classList.add('hide-scrollbar');
+    }
+  }, 1000);
+}
 
 // 组件挂载后执行
 onMounted(() => {
-  // 监听路由哈希变化，立即执行一次
+  // 等待DOM更新完成
+  nextTick(() => {
+    if (sidebar.value) {
+      // 初始时隐藏滚动条
+      sidebar.value.classList.add('hide-scrollbar');
+      
+      // 添加滚动事件监听
+      sidebar.value.addEventListener('scroll', showScrollbar);
+    }
+  });
+  
+  // 监听路由哈希变化，处理激活项滚动
   watchImmediate(() => route.hash, (hash) => {
+    if (!sidebar.value) return;
+    
     // 查找当前激活的侧边栏链接
     const activeSidebarItem = document.querySelector(
       `.vp-sidebar a.vp-sidebar-link[href="${route.path}${hash}"]`
@@ -68,5 +101,42 @@ onMounted(() => {
 </script>
 
 <style scoped>
-/* 这里可以添加组件的额外样式，原样式已通过.scss文件导入 */
+/* 滚动条样式及隐藏效果 */
+.vp-sidebar {
+  /* 确保侧边栏可以滚动 */
+  overflow-y: auto;
+  /* 隐藏默认滚动条，但保留滚动功能 */
+  scrollbar-width: thin;
+  scrollbar-color: rgb(101, 192, 177) transparent;
+  transition: all 0.5s ease;
+}
+
+/* WebKit浏览器滚动条样式 (Chrome, Safari) */
+.vp-sidebar::-webkit-scrollbar {
+  width: 3px;
+}
+
+.vp-sidebar::-webkit-scrollbar-track {
+  background: unset;
+}
+
+.vp-sidebar::-webkit-scrollbar-thumb {
+  background-color: rgba(150, 150, 150, 0.5);
+  border-radius: 2px;
+  transition: background-color 0.3s ease;
+}
+
+.vp-sidebar::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(100, 100, 100, 0.7);
+}
+
+/* 滚动条隐藏类 */
+.vp-sidebar.hide-scrollbar {
+  scrollbar-color: transparent transparent;
+}
+
+.vp-sidebar.hide-scrollbar::-webkit-scrollbar-thumb {
+  background-color: transparent;
+}
 </style>
+    

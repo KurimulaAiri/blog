@@ -8,7 +8,6 @@ const __dirname = getDirname(import.meta.url);
 export default defineUserConfig({
   base: "/",
   lang: "zh-CN",
-  head: [["script", { src: "/extra/sidebar_scrollbar.js", defer: true }]],
   locales: {
     "/": {
       lang: "zh-CN",
