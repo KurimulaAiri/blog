@@ -13,6 +13,10 @@
     -webkit-text-stroke: 0.1px #73d7c7;
 }
 
+.vp-footer-wrapper {
+    z-index: 100;
+}
+
 .vp-nav-logo {
     border-radius: 50%;
     box-shadow: 0 0 0 1px var(--logo-border-color);
