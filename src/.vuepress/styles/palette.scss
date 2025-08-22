@@ -33,19 +33,8 @@ $vds-slide-track-color: (
     dark: rgba(255, 255, 255, 0.5)
 ) !default;
 
-// 侧边栏滚动条背景颜色
-$vp-sidebar-scrollbar-background-color: (
-    light: rgba(255, 255, 255),
-    dark: rgba(27, 27, 31) 
-) !default;
-
 $vp-sidebar-scrollbar-thumb-color: (
     light: rgb(92, 171, 159),
     dark: rgb(97, 181, 168)
 ) !default;
 
-// 侧边栏滚动条隐藏背景颜色
-$vp-sidebar-scrollbar-hidden-background-color: (
-    light: rgb(255, 255, 255),
-    dark: rgb(27, 27, 31)
-) !default;

@@ -1,3 +1,6 @@
+<!-- 自定义侧边栏组件，反编译自 "vuepress-theme-hope/lib/client/components/sidebar/Sidebar.js" 如后续更新框架版本，需要重新进行反编译并自行添加对应功能 -->
+ 
+<!-- 本文件侧边栏组件增加侧边栏滚动条 1 秒后自动隐藏的功能，并对滚动条进行美化 -->
 <template>
   <aside
     ref="sidebar"
@@ -107,7 +110,7 @@ onMounted(() => {
   overflow-y: auto;
   /* 隐藏默认滚动条，但保留滚动功能 */
   scrollbar-width: thin;
-  scrollbar-color: rgb(101, 192, 177) transparent;
+  scrollbar-color: var(--vp-sidebar-scrollbar-thumb-color) transparent;
   transition: all 0.5s ease;
 }
 
