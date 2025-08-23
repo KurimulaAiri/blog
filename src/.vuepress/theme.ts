@@ -15,6 +15,7 @@ export default hopeTheme({
   favicon: "favicon.ico",
   fullscreen: true,
   repo: "KurimulaAiri/blog",
+  darkmode: "toggle",
   docsDir: "src",
   docsBranch: "master",
   editLink: false,

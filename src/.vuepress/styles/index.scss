@@ -1,4 +1,7 @@
 // place your custom styles here
+@use 'sass:color';
+
+@use 'config';
 
 @font-face {
     font-family: 'AaCute';
@@ -8,9 +11,76 @@
     // src: url('/assets/woff/AaCute.woff'), format('woff');
 }
 
+body {
+    font-synthesis: weight style small-caps;
+}
+
+.transparent-navbar {
+    .sidebar-open {
+        .vp-navbar {
+            background-color: var(--navbar-c-bg);
+            box-shadow: 0 2px 8px var(--vp-c-shadow);
+            -webkit-backdrop-filter: saturate(150%) blur(12px);
+            backdrop-filter: saturate(150%) blur(12px);
+
+            .DocSearch-Button {
+                background: var(--docsearch-searchbox-background);
+            }
+        }
+
+        .vp-sidebar {
+            box-shadow: 2px 0 8px var(--vp-c-shadow);
+            background: var(--sidebar-c-bg);
+        }
+    }
+
+    .vp-navbar {
+        .vp-dropdown-wrapper .vp-dropdown {
+            border: none;
+            background: var(--navbar-c-bg);
+            -webkit-backdrop-filter: saturate(150%) blur(12px);
+            backdrop-filter: saturate(150%) blur(12px);
+        }
+
+        .vp-appearance-dropdown {
+            border: none;
+            background-color: var(--navbar-c-bg);
+            -webkit-backdrop-filter: saturate(150%) blur(12px);
+            backdrop-filter: saturate(150%) blur(12px);
+        }
+    }
+
+    .vp-navbar:has(+ .vp-nav-screen) {
+        background-color: var(--navbar-c-bg);
+        box-shadow: 0 2px 8px var(--vp-c-shadow);
+        -webkit-backdrop-filter: saturate(150%) blur(12px);
+        backdrop-filter: saturate(150%) blur(12px);
+
+        .DocSearch-Button {
+            background: var(--docsearch-searchbox-background);
+        }
+    }
+
+    .vp-navbar:hover {
+        background-color: var(--navbar-c-bg);
+        box-shadow: 0 2px 8px var(--vp-c-shadow);
+        -webkit-backdrop-filter: saturate(150%) blur(12px);
+        backdrop-filter: saturate(150%) blur(12px);
+
+        .DocSearch-Button {
+            background: var(--docsearch-searchbox-background);
+        }
+    }
+
+    .vp-sidebar {
+        background: transparent;
+        box-shadow: unset;
+    }
+}
+
 .vp-blog-hero-title {
     color: var(--vp-c-accent-hover);
-    -webkit-text-stroke: 0.1px #73d7c7;
+    -webkit-text-stroke: 0.1px config.$theme-color;
 }
 
 .vp-footer-wrapper {
@@ -21,6 +91,11 @@
     border-radius: 50%;
     box-shadow: 0 0 0 1px var(--logo-border-color);
     background-color: var(--logo-background-color);
+}
+
+.vp-nav-screen {
+    scrollbar-width: thin;
+    scrollbar-color: var(--vp-sidebar-scrollbar-thumb-color);
 }
 
 .vp-blogger-avatar {
@@ -34,10 +109,6 @@
     color: var(--vds-font-color)
 }
 
-.vp-navbar {
-    width: 100vw;
-}
-
 // 红色信息
 #red-msg {
     color: #E53939;
@@ -47,42 +118,3 @@
 #blue-msg {
     color: var(--blue-msg-color);
 }
-
-body {
-    font-synthesis: weight style small-caps;
-}
-
-// 侧边栏滚动条隐藏
-// .vp-sidebar {
-//     overflow-y: scroll;
-//     transition: all 0.5s ease;
-
-//     &::-webkit-scrollbar {
-//         opacity: 0;
-//         background-color: var(--vp-sidebar-scrollbar-background-color);
-//     }
-
-//     &::-webkit-scrollbar-thumb {
-//         background-color: rgb(101, 192, 177);
-//     }
-
-//     &::-webkit-scrollbar-track-piece {
-//         background-color: var(--vp-sidebar-scrollbar-background-color);
-//     }
-
-//     &::-webkit-scrollbar-track {
-//         background-color: var(--vp-sidebar-scrollbar-background-color);
-//     }
-
-//     &.hide-scrollbar::-webkit-scrollbar-track-piece {
-//         background-color: unset;
-//     }
-
-//     &.hide-scrollbar::-webkit-scrollbar-track {
-//         background-color: unset;
-//     }
-
-//     &.hide-scrollbar::-webkit-scrollbar-thumb {
-//         background-color: unset;
-//     }
-// }

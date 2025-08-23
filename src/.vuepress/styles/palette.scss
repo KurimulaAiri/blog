@@ -1,11 +1,14 @@
 // you can change colors here
+@use 'sass:color';
+@use 'config';
+
 $vp-font: 'AaCute';
 
 $vp-font-heading: 'AaCute';
 
 $blue-msg-color: (
-    light: #47857c,
-    dark: #bdfeff
+    light: color.change(config.$theme-color, $lightness: 35%),
+    dark: config.$theme-color
 ) !default;
 
 $vp-c-bg: (
@@ -34,7 +37,7 @@ $vds-slide-track-color: (
 ) !default;
 
 $vp-sidebar-scrollbar-thumb-color: (
-    light: rgb(92, 171, 159),
-    dark: rgb(97, 181, 168)
+    light: color.change(config.$theme-color, $lightness: 35%),
+    dark: config.$theme-color
 ) !default;
 
