@@ -1,3 +1,5 @@
+<!-- 用作计网中 TCP 传输过程同行三表格展示组件 -->
+
 <template>
     <div class="outer-container">
         <!-- 接收的TCP段字段表格 -->
