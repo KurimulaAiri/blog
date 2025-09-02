@@ -48,6 +48,7 @@
         "Nbps",
         "OSPF",
         "PIFS",
+        "proberen",
         "Quicktime",
         "rcvwnd",
         "reissuance",
@@ -75,10 +76,13 @@
         "tracert",
         "underrightarrow",
         "unsubnetted",
+        "verhogen",
         "vidstack",
         "vueuse",
+        "wakeup",
         "Waline",
         "WLAN",
+        "XCHG",
         "zadd",
         "zset"
     ]
