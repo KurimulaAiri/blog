@@ -1,6 +1,7 @@
 {
     "cSpell.words": [
         "Baseband",
+        "Brinch",
         "chartjs",
         "classful",
         "collisionless",
@@ -85,5 +86,7 @@
         "XCHG",
         "zadd",
         "zset"
-    ]
+    ],
+    "trae.tab.enableRename": false,
+    "trae.tab.enableAutoImport": false
 }
