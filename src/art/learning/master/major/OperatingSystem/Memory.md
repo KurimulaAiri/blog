@@ -112,3 +112,218 @@ category:
 
 ## 进程的内存映像
 
+![内存映像模型](https://store.s1r0ko.top/svg/m/os/18/1_ver_1.svg)
+
+假设此时有一段这样的 C 语言代码
+
+```c
+#include <stdio.h>
+#define X 1024 // 定义一个宏 X，值为 1024
+int a = 1; // 全局变量 a，值为 1
+const int b = 2; // 全局常量 b，值为 2
+int main() 
+{
+    static int c = 3; // 静态局部变量 c，值为 3
+    int d = 4; // 局部变量 d，值为 4
+    int *p = (int *)malloc(sizeof(int) * 10); // 动态分配内存，p 指向该内存
+    a = b + c + d; // a = 2 + 3 + 4 = 9
+    for (int i = 0; i < 10; i++)
+    {
+        p[i] = X + i;
+    }
+    printf("hello world \n");
+    return 0;
+}
+```
+那么不同部分位于的内存区域如下
+
+- **操作系统内核区**
+
+进程控制块 PCB 等数据
+
+- **栈区**
+
+在函数大括号内定义的局部变量、函数调用时传入的参数
+
+- **堆区**
+
+动态分配的内存（如 malloc 函数申请和 free 释放的内存）存储在堆区
+
+- **共享库的存储映射区**
+
+被调用的库函数的代码和数据存储在共享库的存储映射区
+
+- **读写数据**
+
+定义在函数外的全局变量、由 static 关键字修饰的变量
+
+- **只读代码/数据段**
+
+程序代码、由 const 关键字修饰的变量
+
+::: code-tabs
+
+@tab 栈
+
+```c
+#include <stdio.h>
+#define X 1024 
+int a = 1; 
+const int b = 2; 
+int main() 
+{
+    static int c = 3; 
+    int d = 4; // [!code highlight]
+    int *p = (int *)malloc(sizeof(int) * 10); // 等号前面的部分 [!code highlight] 
+    a = b + c + d; 
+    for (int i = 0; i < 10; i++)
+    {
+        p[i] = X + i;
+    }
+    printf("hello world \n");
+    return 0;
+}
+```
+
+@tab 共享库的存储映射区
+
+```c
+#include <stdio.h> // [!code highlight]
+#define X 1024 
+int a = 1; 
+const int b = 2; 
+int main() 
+{
+    static int c = 3; 
+    int d = 4; 
+    int *p = (int *)malloc(sizeof(int) * 10); 
+    a = b + c + d; 
+    for (int i = 0; i < 10; i++)
+    {
+        p[i] = X + i;
+    }
+    printf("hello world \n");
+    return 0;
+}
+```
+
+@tab 堆
+
+```c
+#include <stdio.h>
+#define X 1024 
+int a = 1; 
+const int b = 2; 
+int main() 
+{
+    static int c = 3; 
+    int d = 4; 
+    int *p = (int *)malloc(sizeof(int) * 10); // malloc 开辟的内存 [!code highlight] 
+    a = b + c + d; 
+    for (int i = 0; i < 10; i++)
+    {
+        p[i] = X + i;
+    }
+    printf("hello world \n");
+    return 0;
+}
+```
+
+@tab 读写数据段
+
+```c
+#include <stdio.h>
+#define X 1024 
+int a = 1; // [!code highlight]
+const int b = 2; 
+int main() 
+{
+    static int c = 3; // [!code highlight]
+    int d = 4; 
+    int *p = (int *)malloc(sizeof(int) * 10); 
+    a = b + c + d; 
+    for (int i = 0; i < 10; i++)
+    {
+        p[i] = X + i;
+    }
+    printf("hello world \n");
+    return 0;
+}
+```
+
+@tab 只读代码/数据段
+
+```c 
+#include <stdio.h>
+#define X 1024 
+int a = 1; 
+const int b = 2; // [!code highlight]
+int main() 
+{
+    static int c = 3; 
+    int d = 4; 
+    int *p = (int *)malloc(sizeof(int) * 10); 
+    a = b + c + d; // [!code highlight]
+    for (int i = 0; i < 10; i++) // [!code highlight]
+    { // [!code highlight]
+        p[i] = X + i; // [!code highlight]
+    } // [!code highlight]
+    printf("hello world \n"); // [!code highlight]
+    return 0; // [!code highlight]
+}
+```
+
+:::
+
+::: warning 宏定义的变量
+
+宏定义的变量是在预处理阶段展开的，所以在编译时，宏定义的变量会被替换为其对应的值。因此，宏定义的变量会隐含在只读数据段中。（也就是在编译时，宏定义的变量被使用的地方的宏变量名会被替换为其对应的值）
+
+在本例中，所有使用到宏定义的变量 X 都会被替换为 1024。
+
+:::
+
+## 内存的分配与回收
+
+以为用户进程分配的内存是否连续，内存的分配方式区分为连续分配管理方式和非连续分配管理方式。
+
+### 连续分配管理方式
+
+#### 单一连续分配
+
+在单一连续分配方式中，内存被分为**系统区**和**用户区**。系统区通常位于内存的低地址部分，用于存放操作系统相关数据;用户区用于存放用户进程相关数据。内存中**只能有一道用户程序**，用户程序独占整个用户区空间。
+
+- 优点
+    - 实现简单；
+    - 无外部碎片；
+    - 可以采用覆盖技术扩充内存：不一定需要采取内存保护（ eg: 早期的PC操作系统 MS-DOS ）
+
+- 缺点
+
+    - 只能用于单用户、单任务的操作系统中；
+    - 有内部碎片；
+    - 存储器利用率极低
+
+::: tip 内部碎片
+
+分配给某进程的内存区域中，如果有些部分没有用上，就是“内部碎片”
+
+:::
+
+#### 固定分区分配
+
+20 世纪 60 年代出现了支持多道程序的系统，为了能在内存中装入多道程序，且这些程序之间又不会相互干扰，于是将整个**用户空间**划分为**若干个固定大小的分区**，在**每个分区中只装入一道作业**，这样就形成了最早的、最简单的一种可运行多道程序的内存管理方式
+
+固定分区分配又分为**分区大小相等**和**分区大小不等**
+
+- 分区大小相等
+
+    缺乏灵活性，但是很**适合用于用一台计算机控制多个相同对象的场合**（比如：钢铁厂有 n 个相同的炼钢炉，就可把内存分为 n 个大小相等的区域存放 n 个炼钢炉控制程序）
+
+- 分区大小不等
+
+    增加了灵活性，可以满足不同大小的进程需求。根据常在系统中运行的作业大小情况进行划分（比如：划分多个小分区、适量中等分区、少量大分区）
+
+
+
+### 非连续分配管理方式

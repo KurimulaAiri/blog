@@ -166,6 +166,7 @@ export default hopeTheme({
       type: "shiki",
       notationDiff: true,
       collapsedLines: true,
+      notationHighlight: true,
       notationErrorLevel: "true",
     },
 
