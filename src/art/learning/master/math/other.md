@@ -9,6 +9,8 @@ category:
 
 ## 常用公式
 
+### 同角三角函数的基本公式
+
 $\sin^2 x + \cos^2 x = 1$
 
 ### 诱导公式
@@ -51,3 +53,7 @@ $\cos (\alpha \pm \beta) = \cos \alpha \cos \beta \mp \sin \alpha \sin \beta$
 $\tan (\alpha \pm \beta) = \frac{\tan \alpha \pm \tan \beta}{1 \mp \tan \alpha \tan \beta}$，其中 $\tan (\frac{\pi}{4} - \alpha) = \frac{1 - \tan \alpha}{\tan \alpha + 1}$
 
 $\cot (\alpha \pm \beta) = \frac{\cot \alpha \cot \beta \mp 1}{\cot \beta \pm \cot \alpha}$
+
+### 正弦定理
+
+$\frac{a}{\sin \alpha} = \frac{b}{\sin \beta} = \frac{c}{\sin \gamma} = 2R$
