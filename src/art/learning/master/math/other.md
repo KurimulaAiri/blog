@@ -57,3 +57,20 @@ $\cot (\alpha \pm \beta) = \frac{\cot \alpha \cot \beta \mp 1}{\cot \beta \pm \c
 ### 正弦定理
 
 $\frac{a}{\sin \alpha} = \frac{b}{\sin \beta} = \frac{c}{\sin \gamma} = 2R$
+
+### 对数运算法则
+
+$$
+
+\text{对数加法法则：} \ \log_a x + \log_a y = \log_a (xy)
+
+\\
+
+\text{对数减法法则：} \ \log_a x - \log_a y = \log_a \frac{x}{y}
+
+\\
+
+\text{对数幂法则：} \ \log_a x^n = n \log_a x
+
+
+$$

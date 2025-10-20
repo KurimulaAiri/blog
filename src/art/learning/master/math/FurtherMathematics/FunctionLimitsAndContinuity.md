@@ -1,5 +1,5 @@
 ---
-title: 函数极限和连续基础知识结构
+title: 函数极限和连续知识结构
 date: 2025-10-15
 icon: calculator
 order: 101
