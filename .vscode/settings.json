@@ -43,6 +43,7 @@
         "lpop",
         "lpush",
         "Macromedia",
+        "malloc",
         "markmap",
         "mathjax",
         "mathrm",
