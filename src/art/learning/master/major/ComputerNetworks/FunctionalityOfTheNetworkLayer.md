@@ -68,7 +68,7 @@ markmap:
 
 ## 网络层所属的位置
 
-![OSI 模型](//store.s1r0ko.top/svg/m/cn/6/2_ver_2.svg)
+![OSI 模型](//store.kurimula-airi.top/svg/m/cn/6/2_ver_2.svg)
 
 网络层为传输层提供服务，将传输层的数据封装成“ **IP 数据报**”。网络中的路由器根据 IP 数据报**首部**中的**源 IP 地址**和**目的 IP 地址**进行“分组转发”。因此，网络层实现了“**主机到主机**”的传输
 

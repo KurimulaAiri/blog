@@ -14,7 +14,7 @@ category:
 
 如图：
 
-![路由算法和路由协议之间的关系](//store.s1r0ko.top/svg/m/cn/23/1_ver_1.svg)
+![路由算法和路由协议之间的关系](//store.kurimula-airi.top/svg/m/cn/23/1_ver_1.svg)
 
 大纲要求掌握的路由协议： RIP 、 OSPF 、 BGP
 
@@ -62,7 +62,7 @@ BGP 协议使用**路径-向量路由算法（考纲未明确要求掌握该算�
 
 假设有以下路由拓扑：
 
-![距离-向量路由算法示例拓扑](//store.s1r0ko.top/svg/m/cn/23/2_ver_1.svg)
+![距离-向量路由算法示例拓扑](//store.kurimula-airi.top/svg/m/cn/23/2_ver_1.svg)
 
 $c(x, v_1)$ 表示 $X$ 和 $v_1$ 之间的“距离”
 
@@ -84,7 +84,7 @@ $d_{v_1}(net_1)$ 表示 $v_1$ 到 $net_1$ 之间的“距离”
 
 假设一片区域有多个目的路由器
 
-![距离-向量路由算法示例拓扑](//store.s1r0ko.top/svg/m/cn/23/3_ver_1.svg)
+![距离-向量路由算法示例拓扑](//store.kurimula-airi.top/svg/m/cn/23/3_ver_1.svg)
 
 则有 $v_1$ 到 < $net_1$ , $net_2$ , $net_3$ > 的距离分别为 < $d_{v_{1}}(net_1)$ , $d_{v_{1}}(net_2)$ , $d_{v_{1}}(net_3)$ >
 

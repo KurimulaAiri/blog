@@ -25,7 +25,7 @@ category:
 
 ## 常用编码方法
 
-![常用编码方法](//store.s1r0ko.top/svg/m/cn/10/1_ver_2.svg)
+![常用编码方法](//store.kurimula-airi.top/svg/m/cn/10/1_ver_2.svg)
 
 ::: tip
 
@@ -61,7 +61,7 @@ category:
 
 - 基带信号：来自信源的数字信号，需**调制**后才能在某些信道上传输
 
-![常用调制方法](//store.s1r0ko.top/svg/m/cn/10/2_ver_1.svg)
+![常用调制方法](//store.kurimula-airi.top/svg/m/cn/10/2_ver_1.svg)
 
 ::: tip
 

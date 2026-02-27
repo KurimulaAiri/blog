@@ -4,7 +4,7 @@ layout: Blog
 icon: house
 title: KurimulaAiri的小窝
 # heroImage: https://theme-hope-assets.vuejs.press/logo.svg
-heroImage: //store.s1r0ko.top/images/image.png
+heroImage: //store.kurimula-airi.top/images/image.png
 heroImageStyle:
   - border-radius: 50%
   - box-shadow: '0 0 10px'
@@ -14,13 +14,13 @@ heroImageStyle:
 heroText: KurimulaAiri的小窝
 heroFullScreen: true
 
-bgImage: //store.s1r0ko.top/images/bg1.png
+bgImage: //store.kurimula-airi.top/images/bg1.png
 bgImageStyle: 
   # - filter: blur(5px) 
   # - webkit-filter: blur(5px) 
   - background-attachment: fixed
 
-bgImageDark: //store.s1r0ko.top/images/bg2.png
+bgImageDark: //store.kurimula-airi.top/images/bg2.png
 bgImageDarkStyle:
   - filter: blur(5px)
   - webkit-filter: blur(5px)

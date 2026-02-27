@@ -82,7 +82,7 @@ markmap:
 
 - 五层模型 （教学用标准）
 
-![三种分层结构](//store.s1r0ko.top/svg/m/cn/6/1_ver_1.svg)
+![三种分层结构](//store.kurimula-airi.top/svg/m/cn/6/1_ver_1.svg)
 
 ## 网络体系结构的概念
 
@@ -118,7 +118,7 @@ markmap:
 
 数据从顶层传入，每一层向数据添加一个首部，在里面按照该层协议写入信息，然后包括数据和首部作为一个整体传给下一层，下一层再添加一个首部直到物理层进行传输，到达下一节点后，该节点的每一层对对应首部进行解析并处理数据后拆除对应首部或尾部然后依次向上层传输，直到顶层
 
-![数据传输过程](//store.s1r0ko.top/svg/m/cn/6/2_ver_2.svg)
+![数据传输过程](//store.kurimula-airi.top/svg/m/cn/6/2_ver_2.svg)
 
 - 协议数据单元（PDU）：对等层之间交换的数据单位。第 n 层的 PDU 称为第 n 层的协议数据单元（PDU）简写为 n-PDU。
 
@@ -134,7 +134,7 @@ n-SDU + n-PCI = n-PDU = (n-1)-SDU
 
 :::
 
-![各单元划分](//store.s1r0ko.top/svg/m/cn/6/3_ver_2.svg)
+![各单元划分](//store.kurimula-airi.top/svg/m/cn/6/3_ver_2.svg)
 
 ## 协议三要素
 

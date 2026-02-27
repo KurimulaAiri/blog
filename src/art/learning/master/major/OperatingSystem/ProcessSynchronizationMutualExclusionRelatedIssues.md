@@ -142,7 +142,7 @@ consumer() {
 
 这是两个不同的“一前一后问题”，因此也需要设置两个同步信号量
 
-![生产者消费者问题同步关系图](//store.s1r0ko.top/svg/m/os/14/2_ver_1.svg)
+![生产者消费者问题同步关系图](//store.kurimula-airi.top/svg/m/os/14/2_ver_1.svg)
 
 **实现“一前一后”需要“前 V 后 P ”**{#red-msg}
 
@@ -182,7 +182,7 @@ consumer() {
 
     - 整理思路
 
-    ![多生产者-多消费者问题各进程关系](//store.s1r0ko.top/svg/m/os/14/3_ver_1.svg)
+    ![多生产者-多消费者问题各进程关系](//store.kurimula-airi.top/svg/m/os/14/3_ver_1.svg)
 
     - 设置信号量
 
@@ -500,7 +500,7 @@ reader() {
 
     定义互斥信号量数组 `chopstick[5] = {1,1,1,1,1}` 用于实现对 5 个筷子的互斥访问。并对哲学家按 0 ~ 4 编号，哲学家i左边的筷子编号为 i ，右边的筷子编号为`( i + 1 ) % 5`，如图：
 
-    ![哲学家问题示意图](//store.s1r0ko.top/svg/m/os/15/1_ver_1.svg)
+    ![哲学家问题示意图](//store.kurimula-airi.top/svg/m/os/15/1_ver_1.svg)
 
 - **代码实现**
 

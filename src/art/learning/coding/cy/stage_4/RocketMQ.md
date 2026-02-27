@@ -11,6 +11,6 @@ tag:
   - RocketMQ
 ---
 
-<!-- <PDF url="//store.s1r0ko.top/pdf/RocketMQ.pdf" /> -->
+<!-- <PDF url="//store.kurimula-airi.top/pdf/RocketMQ.pdf" /> -->
 
-<PDF url="//store.s1r0ko.top/pdf/RocketMQ.pdf" />
+<PDF url="//store.kurimula-airi.top/pdf/RocketMQ.pdf" />

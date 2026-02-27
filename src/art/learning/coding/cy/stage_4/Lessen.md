@@ -56,11 +56,11 @@ springboot3 spring6.0 支持jdk17
 
 :::
 
-![使用idea springboot脚手架创建](//store.s1r0ko.top/images/c/cy/s4/1_ver_1.png)
+![使用idea springboot脚手架创建](//store.kurimula-airi.top/images/c/cy/s4/1_ver_1.png)
 
-![添加需要的依赖项](//store.s1r0ko.top/images/c/cy/s4/2_ver_1.png)
+![添加需要的依赖项](//store.kurimula-airi.top/images/c/cy/s4/2_ver_1.png)
 
-![通过maven创建项目](//store.s1r0ko.top/images/c/cy/s4/3_ver_1.png)
+![通过maven创建项目](//store.kurimula-airi.top/images/c/cy/s4/3_ver_1.png)
 
 
 ```xml title='修改maven文件导入依赖'
@@ -110,7 +110,7 @@ springboot3 spring6.0 支持jdk17
 
 - 替换类注解为：`@SpringBootApplication`
 
-![主函数配置](//store.s1r0ko.top/images/c/cy/s4/4_ver_1.png)
+![主函数配置](//store.kurimula-airi.top/images/c/cy/s4/4_ver_1.png)
 
 默认包扫描为启动类同层的下一级包
 
@@ -138,13 +138,13 @@ src
 
 比如这个地址就会直接访问static下的1.jpg `http://localhost:9900/1.jpg`
 
-![出现这种问题是没有配置数据库导致的](//store.s1r0ko.top/images/c/cy/s4/5_ver_1.png)
+![出现这种问题是没有配置数据库导致的](//store.kurimula-airi.top/images/c/cy/s4/5_ver_1.png)
 
 两种配置文件都可以使用，properties优先级高于yml
 
 mybatis的相关配置
 
-![image-20250219161421386](//store.s1r0ko.top/images/c/cy/s4/6_ver_1.png)
+![image-20250219161421386](//store.kurimula-airi.top/images/c/cy/s4/6_ver_1.png)
 
 一些思考：拦截器、文件上传如何实现
 
@@ -1181,4 +1181,4 @@ mq消息队列：流量的削峰 业务的解构，使用普通消息、延时�
 
 
 
-![image-20250312160139284](//store.s1r0ko.top/images/c/cy/s4/7_ver_1.png)
+![image-20250312160139284](//store.kurimula-airi.top/images/c/cy/s4/7_ver_1.png)

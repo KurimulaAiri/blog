@@ -23,7 +23,7 @@ category:
 
 口诀：物链网输会示用
 
-![OSI层次顺序](//store.s1r0ko.top/svg/m/cn/6/2_ver_2.svg)
+![OSI层次顺序](//store.kurimula-airi.top/svg/m/cn/6/2_ver_2.svg)
 
 ## 常见的网络设备的功能层次
 

@@ -138,7 +138,7 @@ category:
 
 ### 多对多模型
 
-![多对多模型](//store.s1r0ko.top/svg/m/os/12/1_ver_1.svg)
+![多对多模型](//store.kurimula-airi.top/svg/m/os/12/1_ver_1.svg)
 
 n 个用户级线程映射到 m 个内核级线程（ n $\ge$ m ）。每个用户进程对应 m 个内核级线程
 
@@ -158,11 +158,11 @@ n 个用户级线程映射到 m 个内核级线程（ n $\ge$ m ）。每个用�
 
 线程的状态与转换与进程的状态与转换完全一致
 
-![线程的状态与转换](//store.s1r0ko.top/svg/m/os/12/2_ver_1.svg)
+![线程的状态与转换](//store.kurimula-airi.top/svg/m/os/12/2_ver_1.svg)
 
 ## 线程的组织与控制
 
-![线程的组织与控制](//store.s1r0ko.top/svg/m/os/12/3_ver_1.svg)
+![线程的组织与控制](//store.kurimula-airi.top/svg/m/os/12/3_ver_1.svg)
 
 与进程类似，线程的各种信息保存在线程控制块（ Thread Control Block ， TCB ）中
 

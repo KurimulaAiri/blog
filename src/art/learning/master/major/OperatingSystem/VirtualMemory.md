@@ -126,7 +126,7 @@ category:
 
 请求分页管理地址转换如图所示：
 
-![请求分页管理地址转换](https://store.s1r0ko.top/svg/m/os/19/1_ver_1.svg)
+![请求分页管理地址转换](https://store.kurimula-airi.top/svg/m/os/19/1_ver_1.svg)
 
 ::: warning
 

@@ -23,7 +23,7 @@ category:
 
 口诀：接网输用
 
-![TCP/IP模型](//store.s1r0ko.top/svg/m/cn/6/1_ver_1.svg)
+![TCP/IP模型](//store.kurimula-airi.top/svg/m/cn/6/1_ver_1.svg)
 
 ## TCP/IP中的应用层
 

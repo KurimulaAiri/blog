@@ -11,7 +11,7 @@ category:
 
 ## 操作系统的内核
 
-![计算机的体系结构](//store.s1r0ko.top/svg/m/os/7/1_ver_1.svg)
+![计算机的体系结构](//store.kurimula-airi.top/svg/m/os/7/1_ver_1.svg)
 
 如图所示，操作系统内核由以下几个部分组成：
 

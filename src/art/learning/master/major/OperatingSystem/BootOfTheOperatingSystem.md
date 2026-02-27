@@ -15,7 +15,7 @@ category:
 
 ## 引导的过程
 
-![引导](//store.s1r0ko.top/svg/m/os/8/1_ver_1.svg)
+![引导](//store.kurimula-airi.top/svg/m/os/8/1_ver_1.svg)
 
 如图：
 

@@ -161,7 +161,7 @@ CSMA （Carrier Sense Multiple Access）协议，即**载波监听多路访问�
 
 坚持监听的 CSMA 协议
 
-![1-坚持 CSMA 协议流程图](https://store.s1r0ko.top/svg/m/cn/17/1_ver_1.svg)
+![1-坚持 CSMA 协议流程图](https://store.kurimula-airi.top/svg/m/cn/17/1_ver_1.svg)
 
 - **优点**
 
@@ -175,7 +175,7 @@ CSMA （Carrier Sense Multiple Access）协议，即**载波监听多路访问�
 
 为了解决 1-坚持 CSMA 协议的监听冲突问题，才有了非坚持 CSMA 协议
 
-![非坚持 CSMA 协议流程图](https://store.s1r0ko.top/svg/m/cn/17/2_ver_1.svg)
+![非坚持 CSMA 协议流程图](https://store.kurimula-airi.top/svg/m/cn/17/2_ver_1.svg)
 
 - **优点**
 
@@ -191,7 +191,7 @@ CSMA （Carrier Sense Multiple Access）协议，即**载波监听多路访问�
 
 这里的 $p$ 指的是在信道空闲时，有多大的概率发送数据
 
-![p-坚持 CSMA 协议流程图](https://store.s1r0ko.top/svg/m/cn/17/3_ver_2.svg)
+![p-坚持 CSMA 协议流程图](https://store.kurimula-airi.top/svg/m/cn/17/3_ver_2.svg)
 
 - **优点**
 
@@ -244,13 +244,13 @@ markmap:
 
 ```
 
-![CSMA/CD 协议发送方流程图](https://store.s1r0ko.top/svg/m/cn/17/4_ver_1.svg)
+![CSMA/CD 协议发送方流程图](https://store.kurimula-airi.top/svg/m/cn/17/4_ver_1.svg)
 
 这里的等待时间由[截断二进制指数退避算法](./MediaAccessControl.html#截断二进制指数退避算法)计算得出
 
 可以见得由于冲突次数越大，当前的网络环境可能就越拥堵，因此需要等待的时间的可能取值范围就越大，以尽量避免过于拥堵的网络环境
 
-![CSMA/CD 协议接收方流程图](https://store.s1r0ko.top/svg/m/cn/17/5_ver_1.svg)
+![CSMA/CD 协议接收方流程图](https://store.kurimula-airi.top/svg/m/cn/17/5_ver_1.svg)
 
 ### **CSMA/CA 协议**{#red-msg} [:scream:](./MediaAccessControl.html#符号意义)
 
@@ -327,7 +327,7 @@ SIFS （Short Inter Frame Space），短 IFS ，最短的帧间间隔，预留 S
 
 DIFS > PIFS > SIFS
 
-![CSMA/CA 传输示例图](https://store.s1r0ko.top/svg/m/cn/17/6_ver_1.svg)
+![CSMA/CA 传输示例图](https://store.kurimula-airi.top/svg/m/cn/17/6_ver_1.svg)
 
 假设一种情况
 
@@ -341,7 +341,7 @@ DIFS > PIFS > SIFS
 
 由于无线传播过程中容易受到干扰，所以在接收到数据后一定要对帧做差错控制，这里的 SIFS 也是为此而生
 
-![CSMA/CA 传输示例图（含预约功能）](https://store.s1r0ko.top/svg/m/cn/17/7_ver_1.svg)
+![CSMA/CA 传输示例图（含预约功能）](https://store.kurimula-airi.top/svg/m/cn/17/7_ver_1.svg)
 
 同样的情况，启用信道预约功能的传输过程如上图所示
 

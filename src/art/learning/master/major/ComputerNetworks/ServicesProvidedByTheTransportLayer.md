@@ -134,7 +134,7 @@ UDP 数据报有以下特点
 
 - UDP 支持一对一（封装成单播 IP 数据报）、一对多传输（封装成广播 / 多播 IP 数据报）
 
-![UDP 数据报格式](//store.s1r0ko.top/svg/m/cn/24/1_ver_1.svg)
+![UDP 数据报格式](//store.kurimula-airi.top/svg/m/cn/24/1_ver_1.svg)
 
 ::: warning
 
@@ -159,7 +159,7 @@ UDP 数据报理论最大长度为 **65535 B** （ 64 Kb ）这是由 **IP 数�
 
 ### UDP 检验
 
-![UDP 检验过程格式](//store.s1r0ko.top/svg/m/cn/24/2_ver_2.svg)
+![UDP 检验过程格式](//store.kurimula-airi.top/svg/m/cn/24/2_ver_2.svg)
 
 对于**发送方**{#blue-msg}，会在交付给网络层之前进行**检验和计算**，并将结果填入 UDP 首部的检验和字段中，具体步骤如下
 
@@ -251,7 +251,7 @@ TCP 传输过程中分为三个步骤，这三个步骤中传输的数据单元�
 
 3. 释放连接（四次挥手）
 
-![TCP 传输过程](//store.s1r0ko.top/svg/m/cn/24/3_ver_2.svg)
+![TCP 传输过程](//store.kurimula-airi.top/svg/m/cn/24/3_ver_2.svg)
 
 在上图中， 3 次握手对应发送三个 TCP 报文段
 
@@ -293,7 +293,7 @@ TCP 支持报文拆分和重装，所以可以进行长报文的传输
 
 **对于 TCP 段的首部字段，不需要记住各字段的顺序和位置，只需要记住每个字段的含义即可**{#red-msg}
 
-![TCP 数据段结构](//store.s1r0ko.top/svg/m/cn/24/4_ver_3.svg)
+![TCP 数据段结构](//store.kurimula-airi.top/svg/m/cn/24/4_ver_3.svg)
 
 ::: info TCP 数据段首部各字段及其含义（标红为重点）
 
@@ -331,7 +331,7 @@ TCP 支持报文拆分和重装，所以可以进行长报文的传输
 
 ::: info 建立连接
 
-![TCP 建立连接字段变化](//store.s1r0ko.top/svg/m/cn/24/5_ver_3.svg)
+![TCP 建立连接字段变化](//store.kurimula-airi.top/svg/m/cn/24/5_ver_3.svg)
 
 握手 ③ 后进入 TCP 双工传输阶段，根据握手 ③ 是否携带数据，服务器发出的第一个 TCP 数据段字段也有所不同
 
@@ -351,7 +351,7 @@ TCP 支持报文拆分和重装，所以可以进行长报文的传输
 
 - 握手 ③ 可以携带数据，也可以不携带数据，如果不携带数据，就可以不消耗序号
 
-![TCP 建立连接状态变化](//store.s1r0ko.top/svg/m/cn/24/6_ver_1.svg)
+![TCP 建立连接状态变化](//store.kurimula-airi.top/svg/m/cn/24/6_ver_1.svg)
 
 思考收到某个报文时，双方的状态变化
 
@@ -367,7 +367,7 @@ TCP 支持报文拆分和重装，所以可以进行长报文的传输
 
 ::: info 释放连接
 
-![TCP 释放连接字段变化](//store.s1r0ko.top/svg/m/cn/24/7_ver_3.svg)
+![TCP 释放连接字段变化](//store.kurimula-airi.top/svg/m/cn/24/7_ver_3.svg)
 
 - 考试要点：
 
@@ -379,7 +379,7 @@ TCP 支持报文拆分和重装，所以可以进行长报文的传输
 
 挥手 ④ 不可以携带数据
 
-![TCP 释放连接状态变化](//store.s1r0ko.top/svg/m/cn/24/8_ver_3.svg)
+![TCP 释放连接状态变化](//store.kurimula-airi.top/svg/m/cn/24/8_ver_3.svg)
 
 **这里也可以是服务器先发起挥手，客户端再发起挥手**{#red-msg}
 
@@ -403,7 +403,7 @@ MSL （ Max Segment Lifetime ）：最大报文段寿命，是 TCP 协议规定�
 
 ### TCP 可靠传输和流量控制[:thumbsup:](./MediaAccessControl.html#符号意义)
 
-![TCP 流量控制流程](//store.s1r0ko.top/svg/m/cn/24/9_ver_1.svg)
+![TCP 流量控制流程](//store.kurimula-airi.top/svg/m/cn/24/9_ver_1.svg)
 
 TCP 会创建一个发送缓冲区和一个接收缓冲区，用于存储数据，这个大小一般由操作系统分配，本质上是一个 char 数组
 
@@ -415,7 +415,7 @@ TCP 会创建一个发送缓冲区和一个接收缓冲区，用于存储数据�
 
 假设客户端的缓冲区大小为 10 B ，服务器的缓冲区大小为 8 B
 
-![TCP 流量控制流程](//store.s1r0ko.top/svg/m/cn/24/10_ver_1.svg)
+![TCP 流量控制流程](//store.kurimula-airi.top/svg/m/cn/24/10_ver_1.svg)
 
 1. 根据后两次握手双方交换接收窗口的大小，此时客户端将发送窗口设置为 8 B 对应服务器接收窗口的大小
 
@@ -445,7 +445,7 @@ TCP 会创建一个发送缓冲区和一个接收缓冲区，用于存储数据�
 
 #### 捎带确认
 
-![捎带确认机制](//store.s1r0ko.top/svg/m/cn/24/11_ver_1.svg)
+![捎带确认机制](//store.kurimula-airi.top/svg/m/cn/24/11_ver_1.svg)
 
 1. 继续上面的例子，此时客户端继续向服务器发送 2 B 数据， seq 字段为 608 ，服务器收到后进行差错控制，并将这 2 B 数据存入接收缓冲区内，此时服务器开始向客户端发送 5 B 的数据，于是将这部分数据载入发送缓冲区，此时服务器发送窗口为 8 B ，向客户端发送的 TCP 段各字段为 seq = 200 ， ack = 610 ， rwnd = 6
 
@@ -620,7 +620,7 @@ $$
 
 假设下面的例子中接收方的接收窗口无限大，这样发送窗口的上限就只取决于拥塞窗口的大小
 
-![慢开始、拥塞避免算法示意图](//store.s1r0ko.top/svg/m/cn/24/12_ver_3.svg)
+![慢开始、拥塞避免算法示意图](//store.kurimula-airi.top/svg/m/cn/24/12_ver_3.svg)
 
 根据上图解释：
 
@@ -642,7 +642,7 @@ ssthresh ：慢开始门限（正规翻译） / 拥塞控制阈值（真题术�
 
 和慢开始、拥塞避免算法前期处理类似，但是遇到拥塞后的处理方法不同
 
-![快重传、快恢复算法示意图](//store.s1r0ko.top/svg/m/cn/24/13_ver_2.svg)
+![快重传、快恢复算法示意图](//store.kurimula-airi.top/svg/m/cn/24/13_ver_2.svg)
 
 - **术语解释**
 

@@ -134,7 +134,7 @@ IEEE （Institute of Electrical and Electronics Engineers）是美国电子工�
 
 ### 局域网的硬件架构
 
-![局域网架构图](https://store.s1r0ko.top/svg/m/cn/18/1_ver_1.svg)
+![局域网架构图](https://store.kurimula-airi.top/svg/m/cn/18/1_ver_1.svg)
 
 - 主存中的 IP 地址，**可能会发生变化**
 
@@ -247,7 +247,7 @@ IEEE 802 将数据链路层分为三个层次
 
 ### V2 标准的以太网 MAC 帧
 
-![V2 标准的以太网 MAC 帧结构示意图](https://store.s1r0ko.top/images/m/cn/18/1_ver_1.png)
+![V2 标准的以太网 MAC 帧结构示意图](https://store.kurimula-airi.top/images/m/cn/18/1_ver_1.png)
 
 - 图中的数字均表示 **字节 （Byte）** 的数量
 
@@ -275,7 +275,7 @@ IEEE 802 将数据链路层分为三个层次
 
 ### 帧的传播
 
-![示例网络拓扑图](https://store.s1r0ko.top/svg/m/cn/18/2_ver_2.svg)
+![示例网络拓扑图](https://store.kurimula-airi.top/svg/m/cn/18/2_ver_2.svg)
 
 这里需要注意的是： **MAC 地址是数据链路层的概念，路由器和交换机都有 MAC 地址，集线器则没有**{#red-msg}
 
@@ -325,7 +325,7 @@ $C_5$ 发出广播帧，$C_1, C_2, C_3, C_4, C_6, C_7, R_1$ 都会接收帧
 
 ### 划分 VLAN 的方式
 
-![基于接口划分 VLAN ](https://store.s1r0ko.top/svg/m/cn/18/3_ver_2.svg)
+![基于接口划分 VLAN ](https://store.kurimula-airi.top/svg/m/cn/18/3_ver_2.svg)
 
 ::: info 基于接口
 
@@ -379,7 +379,7 @@ S1 包含接口 8 是因为有部分具有此 VID 的节点位于连接接口 8 
 在跨越交换机时，发送方交换机会在[标准以太网帧](./LocalAreaNetwork.html#v2-标准的以太网-mac-帧)的源地址和协议类型的两个位置中间插入一个 4 字节的 VLAN 标签，指明该帧所属的 VLAN 并且重新生成 CRC 码，因为插入了 VLAN 标签该帧的内容已经改变，先前的 CRC 码已经失效；接收方交换机会在收到该帧并判断处理完成后去除这个部分，然后转发给对应的主机或主机所属的交换机
 
 
-![802.1Q 帧结构](https://store.s1r0ko.top/images/m/cn/18/2_ver_1.png)
+![802.1Q 帧结构](https://store.kurimula-airi.top/images/m/cn/18/2_ver_1.png)
 
 - VLAN 标签分为两个部分，前 2 字节固定为 0x8100 表明该帧为 802.1Q 帧，后 2 字节的前 4 位可以填任何信息，后 12 位为发送方所属的 VLAN 的 VID
 
@@ -395,7 +395,7 @@ S1 包含接口 8 是因为有部分具有此 VID 的节点位于连接接口 8 
 
 ### 802.11 无线局域网的结构 
 
-![家庭局域网结构](https://store.s1r0ko.top/svg/m/cn/18/4_ver_2.svg)
+![家庭局域网结构](https://store.kurimula-airi.top/svg/m/cn/18/4_ver_2.svg)
 
 家用路由器 = 路由器 + 以太网交换机 + AP
 
@@ -407,7 +407,7 @@ S1 包含接口 8 是因为有部分具有此 VID 的节点位于连接接口 8 
 
 ### 基本概念
 
-![802.11 无线局域网结构拓扑](https://store.s1r0ko.top/svg/m/cn/18/5_ver_1.svg)
+![802.11 无线局域网结构拓扑](https://store.kurimula-airi.top/svg/m/cn/18/5_ver_1.svg)
 
 - 802.11 无线局域网是**星型拓扑**，中心称为**接入点（ AP ）**，也可以称为**无线接入点（ WAP ）**
 
@@ -443,7 +443,7 @@ AP 通常具有将 802.11 帧转换为以太网帧的能力
 
 ::: info 数据帧
 
-![802.11 数据帧结构图](https://store.s1r0ko.top/images/m/cn/18/3_ver_1.png)
+![802.11 数据帧结构图](https://store.kurimula-airi.top/images/m/cn/18/3_ver_1.png)
 
 记忆口诀：30 N 4 首数验，首部 3 + 1 地址；九十[^7]比特表去来，帧的中转靠 AP ；去往 AP 中起止[^8]，来自 AP 止中起
 

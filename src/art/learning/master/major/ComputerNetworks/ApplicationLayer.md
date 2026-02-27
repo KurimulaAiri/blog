@@ -351,7 +351,7 @@ SMTP 规定了 14 条命令（几个字母）和 21 种应答信息（三位数�
 
 采用 TCP 协议进行可靠传输，端口号 25
 
-![电子邮件收发流程图](//store.s1r0ko.top/svg/m/cn/25/1_ver_1.svg)
+![电子邮件收发流程图](//store.kurimula-airi.top/svg/m/cn/25/1_ver_1.svg)
 
 发送流程大致如上：分为三个步骤
 
@@ -475,7 +475,7 @@ HTTP / 1.1 默认采用持续连接，但是可以通过 Connection 字段来改
 
 ## HTTP 超文本传输协议
 
-![HTTP 报文格式](//store.s1r0ko.top/svg/m/cn/25/2_ver_1.svg)
+![HTTP 报文格式](//store.kurimula-airi.top/svg/m/cn/25/2_ver_1.svg)
 
 ::: tip HTTP 报文各字段含义
 

@@ -112,7 +112,7 @@ category:
 
 ## 进程的内存映像
 
-![内存映像模型](https://store.s1r0ko.top/svg/m/os/18/1_ver_1.svg)
+![内存映像模型](https://store.kurimula-airi.top/svg/m/os/18/1_ver_1.svg)
 
 假设此时有一段这样的 C 语言代码
 
@@ -625,7 +625,7 @@ int main()
 
 假设某进程执行过程中要依次访问 (0, 0) 、 (0, 4) 、 (0, 8) 这几个逻辑地址
 
-![高速缓存过程](https://store.s1r0ko.top/svg/m/os/18/2_ver_1.svg)
+![高速缓存过程](https://store.kurimula-airi.top/svg/m/os/18/2_ver_1.svg)
 
 若快表中没有目标页表项，则需要查询内存中的页表，最近使用过的页表项会放入快表
 
@@ -739,7 +739,7 @@ N 级页表访问一个逻辑地址需要 N + 1 次访存
 
 分段表查询内存过程具体如下：
 
-![分段表查询内存过程](//store.s1r0ko.top/svg/m/os/18/3_ver_1.svg)
+![分段表查询内存过程](//store.kurimula-airi.top/svg/m/os/18/3_ver_1.svg)
 
 1. 根据逻辑地址得到段号、段内地址
 
@@ -820,7 +820,7 @@ N 级页表访问一个逻辑地址需要 N + 1 次访存
 
 读取内存流程如下：
 
-![段页式存储管理读取内存流程](//store.s1r0ko.top/svg/m/os/18/4_ver_1.svg)
+![段页式存储管理读取内存流程](//store.kurimula-airi.top/svg/m/os/18/4_ver_1.svg)
 
 1. 根据逻辑地址得到段号、页号、页内偏移量
 

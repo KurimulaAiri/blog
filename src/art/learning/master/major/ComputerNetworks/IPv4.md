@@ -11,7 +11,7 @@ category:
 
 ## IPv4 协议
 
-![各层协议之间关系](//store.s1r0ko.top/svg/m/cn/21/1_ver_1.svg)
+![各层协议之间关系](//store.kurimula-airi.top/svg/m/cn/21/1_ver_1.svg)
 
 ::: tip
 
@@ -27,7 +27,7 @@ IGMP 协议用于实现 IP 组播
 
 ## IP 数据报的格式
 
-![IP 数据报的格式](//store.s1r0ko.top/svg/m/cn/21/2_ver_2.svg)
+![IP 数据报的格式](//store.kurimula-airi.top/svg/m/cn/21/2_ver_2.svg)
 
 IP 数据报分为**首部**和**数据部分**两个部分
 
@@ -117,7 +117,7 @@ IP 地址资源由 ICANN（互联网名字与数字分配机构）进行分配�
 
 ICANN 将 IP 地址分为以下几类（如图）：
 
-![IP 地址分类](//store.s1r0ko.top/svg/m/cn/21/3_ver_1.svg)
+![IP 地址分类](//store.kurimula-airi.top/svg/m/cn/21/3_ver_1.svg)
 
 ::: info IP 地址
 
@@ -155,7 +155,7 @@ ICANN 将 IP 地址分为以下几类（如图）：
 
 假设有如下网络拓扑：
 
-![IP 转发示例](//store.s1r0ko.top/svg/m/cn/21/4_ver_2.svg)
+![IP 转发示例](//store.kurimula-airi.top/svg/m/cn/21/4_ver_2.svg)
 
 - 某学校被分配的 IP 网络号为 `166.1.0.0`
 
@@ -222,7 +222,7 @@ ICANN 将 IP 地址分为以下几类（如图）：
 
 如图：
 
-![子网划分](//store.s1r0ko.top/svg/m/cn/21/5_ver_2.svg)
+![子网划分](//store.kurimula-airi.top/svg/m/cn/21/5_ver_2.svg)
 
 子网划分通过将主机位前 N 位拿出来作为子网号，将主机位后 M 位拿出来作为主机号，来实现子网的划分
 
@@ -373,7 +373,7 @@ CIDR 表示法：<IP 地址>/<前缀长度>
 
 缺点：每个子网的 IP 地址块大小相同，不能根据需求灵活调整，会导致 IP 地址资源的浪费
 
-![变长子网划分示例](//store.s1r0ko.top/svg/m/cn/21/6_ver_1.svg)
+![变长子网划分示例](//store.kurimula-airi.top/svg/m/cn/21/6_ver_1.svg)
 
 - **变长子网划分**
 
@@ -405,11 +405,11 @@ CIDR 表示法：<IP 地址>/<前缀长度>
 
 根据上面 CIDR 分配的子网得到的拓扑如下：
 
-![路由聚合示例](//store.s1r0ko.top/svg/m/cn/21/7_ver_1.svg)
+![路由聚合示例](//store.kurimula-airi.top/svg/m/cn/21/7_ver_1.svg)
 
 由图可见 R0 的路由转发表许多网段都具有相同的网络前缀，并且转发至同一接口，因此这里可以使用路由聚合来合并这几个路由表项，将它们合并为一个路由表项，即 101.200.16.0/20 指向 R0 的接口，这样就可以减少路由表项的数量，提高路由效率
 
-![路由聚合示例](//store.s1r0ko.top/svg/m/cn/21/8_ver_1.svg)
+![路由聚合示例](//store.kurimula-airi.top/svg/m/cn/21/8_ver_1.svg)
 
 对于一个路由转发表，如果几条路由表项的**转发接口相同**{#red-msg}，**部分网络前缀也相同**{#red-msg}，那么可以将这几条路由表项聚合为一条。这种地址的聚合称为**路由聚合**，也称为**构成超网**
 
@@ -427,11 +427,11 @@ CIDR 表示法：<IP 地址>/<前缀长度>
 
 现在交换机 S1 上单独拉一条线直接连接 R0 ，此时更新 R0 交换表，会出现两个具有共同网络前缀的网段，当传来一个前往 C2 的数据报时， R0 会遵循最长前缀匹配原则，即选择最长的前缀匹配项，即 128.14.32.128/28 不经过 R1 直接到达 S1
 
-![路由聚合示例](//store.s1r0ko.top/svg/m/cn/21/9_ver_1.svg)
+![路由聚合示例](//store.kurimula-airi.top/svg/m/cn/21/9_ver_1.svg)
 
 ## 子网划分综合示例
 
-![子网划分综合示例](//store.s1r0ko.top/svg/m/cn/21/10_ver_2.svg)
+![子网划分综合示例](//store.kurimula-airi.top/svg/m/cn/21/10_ver_2.svg)
 
 通过这张图自行进行 IP 数据报的发送与接收训练
 
@@ -506,7 +506,7 @@ IP 地址指向某一台主机，而端口号指向该主机上的一个进程�
 
 假设有以下路由结构：
 
-![NAT 路由示例](//store.s1r0ko.top/svg/m/cn/21/11_ver_1.svg)
+![NAT 路由示例](//store.kurimula-airi.top/svg/m/cn/21/11_ver_1.svg)
 
 其 NAT 表如图所示
 
@@ -616,7 +616,7 @@ markmap:
 
 假设现有网络拓扑如图：
 
-![ARP 工作流程](//store.s1r0ko.top/svg/m/cn/21/12_ver_1.svg)
+![ARP 工作流程](//store.kurimula-airi.top/svg/m/cn/21/12_ver_1.svg)
 
 考虑以下流程：
 
@@ -636,7 +636,7 @@ markmap:
 
 4. H3 收到 ARP 响应分组，确认目的 IP 地址和 MAC 地址，将获得的 MAC 地址对应 IP 地址写入 ARP 表中，得到的结果如下图
 
-![ARP 拓扑](//store.s1r0ko.top/svg/m/cn/21/13_ver_3.svg)
+![ARP 拓扑](//store.kurimula-airi.top/svg/m/cn/21/13_ver_3.svg)
 
 5. 获取到默认网关的 MAC 地址后，就继续之前的工作，向 Internet 上的某节点发送数据报
 
@@ -719,7 +719,7 @@ DHCP 是应用层协议，使用 UDP 协议进行通信
 
 假设有以下网络拓扑：
 
-![DHCP 工作流程](//store.s1r0ko.top/svg/m/cn/21/14_ver_2.svg)
+![DHCP 工作流程](//store.kurimula-airi.top/svg/m/cn/21/14_ver_2.svg)
 
 考虑以下情况：
 
@@ -727,17 +727,17 @@ DHCP 是应用层协议，使用 UDP 协议进行通信
 
 1. H3 的 DHCP 客户端进程封装 DHCP 发现报文（DHCP 发现报文的内容是 H3 的 MAC 地址），并且按照如下格式封装并发送给全部主机
 
-![DHCP 发现报文](//store.s1r0ko.top/svg/m/cn/21/15_ver_2.svg)
+![DHCP 发现报文](//store.kurimula-airi.top/svg/m/cn/21/15_ver_2.svg)
 
 对于非 DHCP 服务器收到该报文，在传输层会进行丢弃，因为没有进程运行在 67 端口上
 
 2. DHCP 服务器收到 DHCP 发现报文后，会对发现报文中的内容进行解析，并且在自己管理的 IP 地址池中挑选一个暂时没有使用的 IP 地址，然后封装 DHCP 提供报文，并且按照如下格式封装并发送给 H3 
 
-![DHCP 提供报文](//store.s1r0ko.top/svg/m/cn/21/16_ver_3.svg)
+![DHCP 提供报文](//store.kurimula-airi.top/svg/m/cn/21/16_ver_3.svg)
 
 3. 发送经过交换机的精准转发后会直接到达 H3 其他节点不会收到这个报文， H3 接收提供报文并检查处理后会封装新的**请求报文**然后以广播帧的形式发出去
 
-![DHCP 请求报文](//store.s1r0ko.top/svg/m/cn/21/17_ver_2.svg)
+![DHCP 请求报文](//store.kurimula-airi.top/svg/m/cn/21/17_ver_2.svg)
 
 ::: warning 关于为什么要四步获取 IP 地址，而不是在第二步就直接使用该 IP 地址
 
@@ -747,11 +747,11 @@ DHCP 是应用层协议，使用 UDP 协议进行通信
 
 4. DHCP 服务器收到请求报文后，确认 IP 地址没有冲突，就会封装 DHCP 确认报文，并且按照如下格式封装并发送给 H3 ，此时由于 H3 获取 IP 地址的流程还没有完成，仍然是没有 IP 地址，所有该报文仍是以广播形式发出
 
-![DHCP 确认报文](//store.s1r0ko.top/svg/m/cn/21/18_ver_3.svg)
+![DHCP 确认报文](//store.kurimula-airi.top/svg/m/cn/21/18_ver_3.svg)
 
 5. H3 收到确认报文后，会解析确认报文中的内容，并且将 IP 地址、子网掩码、默认网关配置到自己的网络接口上，完成 IP 信息的配置，如下图所示
 
-![DHCP 最终配置](//store.s1r0ko.top/svg/m/cn/21/19_ver_1.svg)
+![DHCP 最终配置](//store.kurimula-airi.top/svg/m/cn/21/19_ver_1.svg)
 
 ## ICMP 
 
@@ -836,7 +836,7 @@ markmap:
 
 ICMP 报文在普通的 [IP 数据报](./IPv4.html#ip-数据报的格式)的数据部分有所不同
 
-![ICMP 报文结构](//store.s1r0ko.top/svg/m/cn/21/20_ver_1.svg)
+![ICMP 报文结构](//store.kurimula-airi.top/svg/m/cn/21/20_ver_1.svg)
 
 ::: warning
 

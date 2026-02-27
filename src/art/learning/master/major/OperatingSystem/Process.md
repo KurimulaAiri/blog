@@ -129,7 +129,7 @@ PCB 部分是操作系统使用的，用于管理进程的信息，而程序段�
 
 ## 进程状态的转换
 
-![进程的转换](//store.s1r0ko.top/svg/m/os/10/1_ver_1.svg)
+![进程的转换](//store.kurimula-airi.top/svg/m/os/10/1_ver_1.svg)
 
 - 阻塞态→就绪态不是进程自身能控制的，是一种**被动行为**
 
@@ -179,7 +179,7 @@ PCB 部分是操作系统使用的，用于管理进程的信息，而程序段�
 
 ### 如何实现进程控制
 
-![计算机的体系结构](//store.s1r0ko.top/svg/m/os/7/1_ver_1.svg)
+![计算机的体系结构](//store.kurimula-airi.top/svg/m/os/7/1_ver_1.svg)
 
 需使用“原语”实现
 

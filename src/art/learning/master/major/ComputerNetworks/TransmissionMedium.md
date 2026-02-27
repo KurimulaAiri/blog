@@ -27,7 +27,7 @@ category:
 
 ## 双绞线
 
-![双绞线](//store.s1r0ko.top/images/m/cn/11/1_ver_1.png)
+![双绞线](//store.kurimula-airi.top/images/m/cn/11/1_ver_1.png)
 
 ````markmap
 ---
@@ -62,7 +62,7 @@ markmap:
 
 ## 同轴电缆
 
-![同轴电缆](//store.s1r0ko.top/images/m/cn/11/2_ver_1.png)
+![同轴电缆](//store.kurimula-airi.top/images/m/cn/11/2_ver_1.png)
 
 ````markmap
 ---
@@ -92,7 +92,7 @@ markmap:
 
 ## 光纤
 
-![光纤](//store.s1r0ko.top/images/m/cn/11/3_ver_1.png)
+![光纤](//store.kurimula-airi.top/images/m/cn/11/3_ver_1.png)
 
 ````markmap
 ---
