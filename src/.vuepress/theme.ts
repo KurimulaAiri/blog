@@ -230,7 +230,7 @@ export default hopeTheme(
       docsearch: {
         appId: 'ULF54MS9H5',
         apiKey: 'b1179e69fff348d7b0ff1928975af8fd',
-        indexName: 'md-s1r0ko',
+        indexName: 'md-kurimula-airi',
         // container: "### REPLACE ME WITH A CONTAINER (e.g. div) ###",
       },
 
