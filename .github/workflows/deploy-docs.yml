@@ -33,12 +33,10 @@ jobs:
           cache: pnpm
 
       - name: 安装依赖
-        env:
-          # pnpm 会自动将此环境变量解析为配置项
-          NPM_CONFIG_ONLY_ALLOW_TRUSTED_DEPENDENCIES: false
         run: |
           corepack enable
-          pnpm install --no-frozen-lockfile
+          # 显式允许关键依赖运行构建脚本
+          pnpm install --no-frozen-lockfile --only-allow-trusted-dependencies
 
 
       - name: 构建文档
