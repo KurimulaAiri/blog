@@ -22,7 +22,7 @@ jobs:
       - name: 设置 pnpm
         uses: pnpm/action-setup@v5
         with:
-          version: 11
+          version: 9
 
       - name: 设置 Node.js
         uses: actions/setup-node@v5
@@ -32,9 +32,6 @@ jobs:
 
       - name: 安装依赖
         run: |
-          corepack enable
-          # 通过环境变量强制禁用审计，注意变量名必须全大写
-          export NPM_CONFIG_ONLY_ALLOW_TRUSTED_DEPENDENCIES=false
           pnpm install --no-frozen-lockfile
 
       - name: 构建文档
