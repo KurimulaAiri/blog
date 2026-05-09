@@ -28,6 +28,9 @@
     "vuepress-theme-hope": "^2.0.0-rc.94"
   },
   "pnpm": {
+    "patchedDependencies": {
+      "esbuild@*": "0.18.1"
+     },
     "onlyBuiltDependencies": [
       "esbuild"
     ]
