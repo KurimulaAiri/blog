@@ -1,9 +1,9 @@
 
 name: 部署文档
 
-on:
+于:
   push:
-    branches:
+    分支:
       - master
 
 permissions:
@@ -33,10 +33,11 @@ jobs:
           cache: pnpm
 
       - name: 安装依赖
+        env:
+          # pnpm 会自动将此环境变量解析为配置项
+          NPM_CONFIG_ONLY_ALLOW_TRUSTED_DEPENDENCIES: false
         run: |
           corepack enable
-          # 先全局关闭安全审计，再进行安装
-          pnpm config set only-allow-trusted-dependencies false
           pnpm install --no-frozen-lockfile
 
 
@@ -51,5 +52,5 @@ jobs:
         uses: JamesIves/github-pages-deploy-action@v4
         with:
           # 部署文档
-          branch: gh-pages
+          分支: gh-pages
           folder: src/.vuepress/dist
