@@ -1,4 +1,3 @@
-
 name: 部署文档
 
 on:
@@ -25,7 +24,6 @@ jobs:
         with:
           version: 10
 
-
       - name: 设置 Node.js
         uses: actions/setup-node@v4
         with:
@@ -35,9 +33,8 @@ jobs:
       - name: 安装依赖
         run: |
           corepack enable
-          # 显式允许关键依赖运行构建脚本
-          pnpm install --no-frozen-lockfile --only-allow-trusted-dependencies
-
+          # 在 pnpm 11 中，通过 --config 明确传递该配置项
+          pnpm install --no-frozen-lockfile --config.only-allow-trusted-dependencies=false
 
       - name: 构建文档
         env:
