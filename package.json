@@ -28,11 +28,8 @@
     "vuepress-theme-hope": "^2.0.0-rc.94"
   },
   "pnpm": {
-    "neverBuiltDependencies": [
-      "esbuild"
-    ],
     "onlyBuiltDependencies": [
-      "esbuild"
+      "vite"
     ]
   }
 }
